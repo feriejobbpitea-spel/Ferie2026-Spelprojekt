@@ -19,11 +19,10 @@ public class PlayerMovement : NetworkBehaviour
 
      void Update()
     {
-       
         if (!IsOwner)
             return;
+
         horizontalInput = Input.GetAxis("Horizontal");
-        print(horizontalInput);
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
