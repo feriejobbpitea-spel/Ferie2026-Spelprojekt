@@ -33,32 +33,21 @@ public class NetworkStartUI : MonoBehaviour
         }
     }
 
-    [SerializeField] private ButtonWrapper quickJoinButton;
-    
     private void Awake()
     {
         LoadingScreen.SetActive(false);
 
         m_ViewModel = new QuickJoinViewModel(m_SessionSettings?.sessionType);
         SessionSettings = m_SessionSettings;
+
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        quickJoinButton.onClick.AddListener(OnQuickJoinClicked);
+        QuickJoin();
     }
 
-    private void OnDisable()
-    {
-        quickJoinButton.onClick.RemoveListener(OnQuickJoinClicked);
-    }
-
-    private void Update()
-    {
-        quickJoinButton.interactable = m_ViewModel.CanClickButton;
-    }
-
-    private void OnQuickJoinClicked()
+    private void QuickJoin()
     {
 
         if (!SessionSettings)
