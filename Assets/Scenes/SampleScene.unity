@@ -576,6 +576,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52ce65f8101dfe347a220272ddf532cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkStartUI
+  QuickJoinSettings: {fileID: 0}
+  m_SessionSettings: {fileID: 0}
+  LoadingScreen: {fileID: 0}
 --- !u!1 &2143438039
 GameObject:
   m_ObjectHideFlags: 0
