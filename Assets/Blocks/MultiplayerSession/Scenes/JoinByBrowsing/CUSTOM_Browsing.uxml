@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Blocks/customuss.uss?fileID=7433441132597879392&amp;guid=daca3bddf718ee64fa3b6ac518954e2c&amp;type=3#customuss"/>
+    <ui:VisualElement data-source="" style="flex-grow: 1; width: 705px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; flex-direction: row;">
+        <Blocks.Sessions.QuickJoinButton data-source="" session-settings="project://database/Assets/Blocks/MultiplayerSession/Settings/SessionSettings.asset?fileID=11400000&amp;guid=0bf4e1684added44da254017c7fc41b2&amp;type=2#SessionSettings" quick-join-settings="project://database/Assets/Blocks/MultiplayerSession/Settings/QuickJoinSettings.asset?fileID=11400000&amp;guid=342532e706f5ac34582e818ea7e1ae33&amp;type=2#QuickJoinSettings" style="height: 37px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="Loading-screen" style="flex-grow: 1; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(96, 96, 96, 0.871); justify-content: center; align-self: center; align-items: center;">
+        <ui:Label text="Loading..." style="color: rgb(255, 255, 255); font-size: 18px;"/>
+    </ui:VisualElement>
+</ui:UXML>
