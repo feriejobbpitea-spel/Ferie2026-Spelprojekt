@@ -17,6 +17,9 @@ public class PlayerManager : Singleton<PlayerManager>
    
     private void OnPlayerRespawn(GameObject Player)
     {
+        // Återställ spelarens position till 0, 0
+        Player.transform.position = Vector3.zero;
+
         Player.SetActive(true);
     }
 }
