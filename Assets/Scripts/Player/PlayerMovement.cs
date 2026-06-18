@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     float horizontalInput;
     float moveSpeed = 5f;
@@ -19,10 +19,11 @@ public class PlayerMovement : NetworkBehaviour
 
      void Update()
     {
-        if (!IsOwner)
-            return;
-
+        // Kolla input för A och D knapparna
+        // HorizontalInput kan vara någonstans mellan -1 och 1, där -1 är full vänster, 0 är ingen rörelse och 1 är full höger
         horizontalInput = Input.GetAxis("Horizontal");
+
+        // Kolla om spelaren trycker på hopp-knappen och se till att spelaren inte redan är i luften (isJumping)
         if (Input.GetButtonDown("Jump") && !isJumping)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
@@ -31,8 +32,6 @@ public class PlayerMovement : NetworkBehaviour
     }
     private void FixedUpdate()
     {
-        if (!IsOwner)
-            return;
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
     }
 

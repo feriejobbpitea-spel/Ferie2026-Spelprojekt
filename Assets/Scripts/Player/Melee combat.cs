@@ -41,7 +41,7 @@ public class Meleecombat : MonoBehaviour
         }
     
     
-    private void nDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);
     }
