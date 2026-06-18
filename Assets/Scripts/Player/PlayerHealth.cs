@@ -6,10 +6,12 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth = 10;
 
+    public HealthBar healthBar;
 
     void Start()
     {
         health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
 
@@ -23,5 +25,6 @@ public class PlayerHealth : MonoBehaviour
             health = maxHealth;
         }
 
+        healthBar.SetHealth(health);
     }
 }   
