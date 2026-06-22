@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SkinManager : MonoBehaviour
 {
+    public int PlayerID;    
     public Image sr;
     public List<Sprite> skins = new List<Sprite>();
     private int selectedSkin = 0;
@@ -36,7 +37,19 @@ public class SkinManager : MonoBehaviour
 
     public void PlayGame()
     {
-        PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/selectskin.prefab");
+        if (PlayerID == 1)
+        {
+            PlayerManager.player1ID = selectedSkin;
+
+        }
+
+        if (PlayerID == 2)
+        {
+            PlayerManager.player2ID = selectedSkin;
+
+        }
+
+        //PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/selectskin.prefab");
         SceneManager.LoadScene("MainGame");
     }
 }

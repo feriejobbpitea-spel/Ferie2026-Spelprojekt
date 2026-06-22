@@ -291,13 +291,7 @@ MonoBehaviour:
   PositionMode: 0
   RotationMode: 0
   UpdateMethod: 2
-  Targets:
-  - Object: {fileID: 0}
-    Weight: 1
-    Radius: 3
-  - Object: {fileID: 0}
-    Weight: 1
-    Radius: 3
+  Targets: []
   m_LegacyTargets: []
 --- !u!4 &427623802
 Transform:
@@ -308,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 427623800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -903,7 +897,7 @@ Transform:
   m_GameObject: {fileID: 672150412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1542,7 +1536,7 @@ Transform:
   m_GameObject: {fileID: 1110076904}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1978,7 +1972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00518cd0d238c5a4c853bdd6146c29c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
-  PlayerPrefabs: []
+  PlayerPrefabs:
+  - {fileID: 1381896936048955567, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+  - {fileID: 1115376217604938688, guid: e983f8377884a644cb9ac5d9f3d2f68a, type: 3}
+  - {fileID: 1115376217604938688, guid: 33d584547141d944184df421968d787f, type: 3}
 --- !u!4 &1510489903
 Transform:
   m_ObjectHideFlags: 0
