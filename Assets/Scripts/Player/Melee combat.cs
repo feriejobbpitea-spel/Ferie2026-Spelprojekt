@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 public class Meleecombat : MonoBehaviour
 {
+    [SerializeField] private int PlayerID = 0;
     public Transform attackOrigin;
     public float attackRadius = 1f;
     public LayerMask enemyMask;
@@ -16,7 +17,8 @@ public class Meleecombat : MonoBehaviour
     {
         if (cooldownTimer <= 0) {
 
-            if (Input.GetKey(KeyCode.K))
+
+            if (Input.GetButtonDown($"Melee Combat - Player {PlayerID}"))
             {
                 Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
 
@@ -26,7 +28,7 @@ public class Meleecombat : MonoBehaviour
                     if (enemyplayerHealth == ourPlayerHealth)
                         continue;
 
-                    enemyplayerHealth.TakeDamage(attackDamage);
+                    enemyplayerHealth.TakeDamage(attackDamage, this.transform);
                     
                 }
                 cooldownTimer = cooldownnTime;

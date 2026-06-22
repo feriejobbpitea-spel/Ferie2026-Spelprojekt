@@ -47,6 +47,9 @@ GameObject:
   - component: {fileID: 2651478061627270701}
   - component: {fileID: -2738824491799416245}
   - component: {fileID: 5308136236837756989}
+  - component: {fileID: 5371871456530348200}
+  - component: {fileID: 1207166917699366438}
+  - component: {fileID: 5030096354292984827}
   m_Layer: 7
   m_Name: Player 1
   m_TagString: Player
@@ -68,6 +71,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9204101100345577375}
+  - {fileID: 416973336598152857}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3395570665020629262
@@ -254,7 +258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: -52
-  maxHealth: 10
+  maxHealth: 100
+  healthBar: {fileID: 0}
 --- !u!114 &5308136236837756989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,11 +272,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c75b845dcf05274a9f9807068f4ab08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
+  PlayerID: 1
   attackOrigin: {fileID: 9204101100345577375}
   attackRadius: 1.47
   enemyMask:
     serializedVersion: 2
     m_Bits: 192
   ourPlayerHealth: {fileID: -2738824491799416245}
-  attackDamage: 3
+  attackDamage: 10
   cooldownnTime: 2
+--- !u!114 &5371871456530348200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159717833775409627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92680669453faff47b17e26b783fa119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  Rplayer: {fileID: -2738824491799416245}
+  PlayerID: 1
+  firePoint: {fileID: 416973336598152857}
+  bulletPrefab: {fileID: 4709703550948824702, guid: 57f2600792c3fc94f9c766cd80376df1, type: 3}
+--- !u!114 &1207166917699366438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159717833775409627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bd65edba9592e42b6f65a52fc6bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerKnockback
+--- !u!114 &5030096354292984827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159717833775409627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be938d25995a4094a9b5d21de0aab394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
+--- !u!1 &8668670326865398594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416973336598152857}
+  m_Layer: 7
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &416973336598152857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8668670326865398594}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.3, y: -0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7762627048667372040}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

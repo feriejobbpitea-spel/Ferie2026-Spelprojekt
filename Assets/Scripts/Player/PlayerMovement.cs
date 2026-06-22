@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float GroundCheckDistance = 1;
     [SerializeField] private LayerMask GroundLayerMask;
 
+
+    private Vector2 externalForces;
+
     float horizontalInput;
     float moveSpeed = 5f;
     float jumpPower = 4f;
@@ -24,12 +27,14 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-  
+   
 
     void Update()
     {
+        externalForces = Vector2.Lerp (externalForces, Vector2.zero, Time.deltaTime * 5);
+        Flip();
         HandleMovement();
-        HandleSpriteFlipping();
+        
     }
 
     private void HandleMovement() 
@@ -49,14 +54,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void HandleSpriteFlipping() 
+    public void ApplyForce(Vector2 force) 
     {
-        // Flippa karaktärens sprite ifall vi går vänster
+        externalForces += force;
+    }
+
+   private void Flip()
+    {
         if (horizontalInput < 0)
-            spriteRenderer.flipX = true;
-        // Flippa tillbaka karaktärens sprite ifall vi går höger
+        {
+            transform.eulerAngles = new (0f, 180f, 0f);
+
+        }
         if (horizontalInput > 0)
-            spriteRenderer.flipX = false;
+        {
+            transform.eulerAngles = new(0f, 0, 0f);
+        }
+
+
     }
 
 
@@ -65,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x + (horizontalInput * moveSpeed), rb.linearVelocity.y);
+        float multipliedInput = horizontalInput * moveSpeed;
+        rb.linearVelocity = new Vector2(multipliedInput + externalForces.x, rb.linearVelocity.y + externalForces.y);
     }
 }
 
