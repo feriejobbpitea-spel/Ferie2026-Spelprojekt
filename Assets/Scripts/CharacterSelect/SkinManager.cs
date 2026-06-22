@@ -21,6 +21,17 @@ public class SkinManager : MonoBehaviour
         }
 
         sr.sprite = skins[selectedSkin];
+
+        if (PlayerID == 1)
+        {
+            PlayerManager.player1ID = selectedSkin;
+        }
+
+        if (PlayerID == 2)
+        {
+            PlayerManager.player2ID = selectedSkin;
+
+        }
     }
 
     public void BackOption()
@@ -32,14 +43,10 @@ public class SkinManager : MonoBehaviour
         }
 
         sr.sprite = skins[selectedSkin];
-    }
 
-    public void PlayGame()
-    {
         if (PlayerID == 1)
         {
             PlayerManager.player1ID = selectedSkin;
-
         }
 
         if (PlayerID == 2)
@@ -47,9 +54,5 @@ public class SkinManager : MonoBehaviour
             PlayerManager.player2ID = selectedSkin;
 
         }
-
-        //PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/selectskin.prefab");
-        //SceneManager.LoadScene("MainGame");
-        //SceneLoader.LoadScene("MainGame");
     }
 }
