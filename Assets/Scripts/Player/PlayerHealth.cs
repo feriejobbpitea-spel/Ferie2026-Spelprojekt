@@ -1,3 +1,4 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -8,23 +9,37 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public static event Action OnPlayerDied;
+    public static event Action<PlayerHurtPayload> OnPlayerHurt;
+    public static event Action<PlayerHealth> OnPlayerHealthChanged;
+
     void Start()
     {
         health = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        OnPlayerHealthChanged?.Invoke(this);
     }
 
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, Transform attacker)
     {
         health -= amount;
+
+        // Skicka till eventet att spelaren har tagit skada, så att andra scripts kan reagera på det
+        OnPlayerHurt?.Invoke(new PlayerHurtPayload
+        {
+            Attacker = attacker,
+            DamageTaken = amount,
+            Victim = this
+        });
 
         if (health <= 0)
         {
             PlayerManager.Instance.OnPlayerDeath(gameObject);
+            OnPlayerDied?.Invoke();
             health = maxHealth;
         }
 
-        healthBar.SetHealth(health);
+        //healthBar.SetHealth(health);
+        OnPlayerHealthChanged?.Invoke(this);
     }
 }   

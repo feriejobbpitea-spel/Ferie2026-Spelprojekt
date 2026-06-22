@@ -5,9 +5,19 @@ public class Weapon : MonoBehaviour
     private float cooldownTime = 3f;
     private float cooldownTimer = 0f;
     public PlayerHealth Rplayer;
-    [SerializeField] private int PlayerID = 0;
+    
+    private int PlayerID => player.PlayerID;
+    private Player player;
+
     public Transform firePoint;
     public GameObject bulletPrefab;
+
+    private void Awake()
+    {
+        player = GetComponent<Player>();
+    }
+
+    // Update is called once per frame
    
     
 

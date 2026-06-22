@@ -5,11 +5,14 @@ public class Bullet : MonoBehaviour
 {
     public int damage = 40;
     public float speed = 20f;
+    public float upwardSpeed = 20f;
     public Rigidbody2D rb;
     public PlayerHealth Attacker;
+
     void Start()
     {
-        rb.linearVelocity = transform.right * speed;
+        Vector2 direction = transform.right * speed + Vector3.up * upwardSpeed; // Skjut i den riktning som objektet är vänt + uppåt
+        rb.linearVelocity = direction;
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
@@ -19,7 +22,7 @@ public class Bullet : MonoBehaviour
         {
             if(playerHealth != Attacker)
             {
-                playerHealth.TakeDamage(damage);
+                playerHealth.TakeDamage(damage, this.transform);
                 Destroy(gameObject);
 
             }
