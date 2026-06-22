@@ -11,7 +11,6 @@ public class SkinManager : MonoBehaviour
     public Image sr;
     public List<Sprite> skins = new List<Sprite>();
     private int selectedSkin = 0;
-    public GameObject playerskin;
 
     public void NextOption()
     {
@@ -50,6 +49,7 @@ public class SkinManager : MonoBehaviour
         }
 
         //PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/selectskin.prefab");
-        SceneManager.LoadScene("MainGame");
+        //SceneManager.LoadScene("MainGame");
+        SceneLoader.LoadScene("MainGame");
     }
 }
