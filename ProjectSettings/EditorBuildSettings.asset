@@ -17,11 +17,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/$IsaksFeriePack/SceneManager/LoadingScreen/LoadingScreen.unity
     guid: b6f75b91344125e42b6d3202ecb9d629
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Isak.unity
     guid: 3eff50c085cd2f54389e1e63e7cd3c2b
+  - enabled: 1
+    path: Assets/Scenes/Character Select.unity
+    guid: d5f25eecd15a30845b5441c40b37915a
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: efdd06bbe75b7e149a0667290a677749
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

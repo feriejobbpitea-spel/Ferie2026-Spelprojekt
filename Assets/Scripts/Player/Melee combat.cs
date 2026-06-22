@@ -11,7 +11,7 @@ public class Meleecombat : MonoBehaviour
     public PlayerHealth ourPlayerHealth;
     public int attackDamage = 2;
 
-    public float cooldownnTime = 5f;
+    public float cooldownTime = 5f;
     private float cooldownTimer = 0f;
     private void Update()
     {
@@ -31,7 +31,7 @@ public class Meleecombat : MonoBehaviour
                     enemyplayerHealth.TakeDamage(attackDamage);
                     
                 }
-                cooldownTimer = cooldownnTime;
+                cooldownTimer = cooldownTime;
 
             }
 
@@ -40,7 +40,7 @@ public class Meleecombat : MonoBehaviour
         {
             cooldownTimer -= Time.deltaTime;
         }
-        }
+    }
     
     
     private void OnDrawGizmos()

@@ -2,19 +2,37 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    private float cooldownTime = 3f;
+    private float cooldownTimer = 0f;
     public PlayerHealth Rplayer;
     [SerializeField] private int PlayerID = 0;
     public Transform firePoint;
     public GameObject bulletPrefab;
+   
+    
 
-    // Update is called once per frame
+    
     void Update()
     {
-        if (Input.GetButtonDown($"Fire - Player {PlayerID}"))
-        {
-            Shoot();
-        }
+       if (cooldownTimer <= 0)
+       {
+
+
+            if (Input.GetButtonDown($"Fire - Player {PlayerID}"))
+            {
+                Shoot();
+                cooldownTimer = cooldownTime;
+            }
+
+           
+       }
+       else
+       {
+          cooldownTimer -= Time.deltaTime;
+       }
     }
+
+
 
     void Shoot()
     {
