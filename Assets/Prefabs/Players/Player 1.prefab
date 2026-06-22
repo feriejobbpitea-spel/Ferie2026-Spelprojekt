@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3395570665020629262}
   - component: {fileID: 4208946382498450224}
   - component: {fileID: 278087509501437113}
+  - component: {fileID: 1381896936048955567}
   - component: {fileID: 2821278706121033750}
   - component: {fileID: 2651478061627270701}
   - component: {fileID: -2738824491799416245}
@@ -167,7 +168,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.012489796, y: -0.14519662}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -177,7 +178,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.21272945, y: 0.70960677}
   m_EdgeRadius: 0
 --- !u!50 &278087509501437113
 Rigidbody2D:
@@ -206,6 +207,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1381896936048955567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7159717833775409627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02a1ed58d168a414aa77ba030277871f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  PlayerID: 1
 --- !u!114 &2821278706121033750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0afe277b497364fa35f33ecc789600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  PlayerID: 1
   GroundCheckDistance: 0.56
   GroundLayerMask:
     serializedVersion: 2
@@ -272,7 +285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c75b845dcf05274a9f9807068f4ab08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
-  PlayerID: 1
   attackOrigin: {fileID: 9204101100345577375}
   attackRadius: 1.47
   enemyMask:
@@ -294,7 +306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Rplayer: {fileID: -2738824491799416245}
-  PlayerID: 1
   firePoint: {fileID: 416973336598152857}
   bulletPrefab: {fileID: 4709703550948824702, guid: 57f2600792c3fc94f9c766cd80376df1, type: 3}
 --- !u!114 &1207166917699366438

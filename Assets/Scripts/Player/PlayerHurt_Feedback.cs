@@ -22,7 +22,7 @@ public class PlayerHurt_Feedback : MonoBehaviour
     private void PlayerHealth_OnPlayerHurt(PlayerHurtPayload payload)
     {
         var newParticles = GameObject.Instantiate(ParticlePrefab, payload.Victim.transform.position, Quaternion.identity);
-        Destroy(newParticles, RemoveAfterTime);
+        Destroy(newParticles.gameObject, RemoveAfterTime);
 
         var newText = GameObject.Instantiate(TextPrefab, payload.Victim.transform.position + Offset + Random.insideUnitSphere * RandomOffset, Quaternion.identity);
         

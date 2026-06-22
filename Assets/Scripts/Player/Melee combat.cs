@@ -1,10 +1,11 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+
+[RequireComponent(typeof(Player))]
 public class Meleecombat : MonoBehaviour
 {
-    [SerializeField] private int PlayerID = 0;
+    private int PlayerID => player.PlayerID;
+    private Player player;
+
     public Transform attackOrigin;
     public float attackRadius = 1f;
     public LayerMask enemyMask;
@@ -13,6 +14,12 @@ public class Meleecombat : MonoBehaviour
 
     public float cooldownnTime = 5f;
     private float cooldownTimer = 0f;
+
+    private void Awake()
+    {
+        player = GetComponent<Player>();
+    }
+
     private void Update()
     {
         if (cooldownTimer <= 0) {

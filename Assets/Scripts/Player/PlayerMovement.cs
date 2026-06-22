@@ -1,11 +1,13 @@
 using Unity.Netcode;
 using UnityEngine;
 
+[RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
     // Detta använder vi för att bestämma om vilka kontroller 
     // I Project Settings -> Input Manager har vi skapat "Horizontal - Player 1", "Horizontal - Player 2", "Jump - Player 1" och "Jump - Player 2"
-    [SerializeField] private int PlayerID = 0;
+    private int PlayerID => player.PlayerID;
+    private Player player;
 
     // För att kolla om spelaren nuddar marken
     [SerializeField] private float GroundCheckDistance = 1;
@@ -25,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        player = GetComponent<Player>();
     }
 
    
