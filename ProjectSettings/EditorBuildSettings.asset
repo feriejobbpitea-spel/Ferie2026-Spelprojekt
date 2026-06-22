@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/$IsaksFeriePack/SceneManager/LoadingScreen/LoadingScreen.unity
     guid: b6f75b91344125e42b6d3202ecb9d629
   - enabled: 1
-    path: Assets/Scenes/Isak.unity
+    path: Assets/Scenes/MainGame.unity
     guid: ea87f95367261474686eaf60883a3f65
   - enabled: 1
     path: Assets/Scenes/Character Select.unity

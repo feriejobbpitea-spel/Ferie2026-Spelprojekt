@@ -50,6 +50,6 @@ public class SkinManager : MonoBehaviour
 
         //PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/selectskin.prefab");
         //SceneManager.LoadScene("MainGame");
-        SceneLoader.LoadScene("MainGame");
+        //SceneLoader.LoadScene("MainGame");
     }
 }

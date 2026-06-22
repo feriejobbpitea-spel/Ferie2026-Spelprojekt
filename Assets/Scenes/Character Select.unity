@@ -806,8 +806,8 @@ MonoBehaviour:
   PlayerID: 1
   sr: {fileID: 705293674}
   skins:
-  - {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
   - {fileID: 21300000, guid: 96136fdcd7f30434283c59edeac094b8, type: 3}
+  - {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
   - {fileID: 869046328017328930, guid: a00c46c90bf47dd4794aa09fd0438f1b, type: 3}
 --- !u!4 &1031175017
 Transform:
@@ -1778,8 +1778,8 @@ MonoBehaviour:
   PlayerID: 2
   sr: {fileID: 1607282445}
   skins:
-  - {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
   - {fileID: 21300000, guid: 96136fdcd7f30434283c59edeac094b8, type: 3}
+  - {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
   - {fileID: 869046328017328930, guid: a00c46c90bf47dd4794aa09fd0438f1b, type: 3}
 --- !u!4 &1739366989
 Transform:
