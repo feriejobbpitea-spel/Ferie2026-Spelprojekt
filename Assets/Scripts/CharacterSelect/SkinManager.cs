@@ -12,6 +12,11 @@ public class SkinManager : MonoBehaviour
     public List<Sprite> skins = new List<Sprite>();
     private int selectedSkin = 0;
 
+    private void Awake()
+    {
+        NextOption();
+    }
+
     public void NextOption()
     {
         selectedSkin = selectedSkin + 1;
