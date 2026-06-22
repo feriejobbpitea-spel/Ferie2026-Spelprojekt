@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     float moveSpeed = 5f;
     float jumpPower = 4f;
 
-    bool isGrounded = false;
-
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
 
@@ -30,9 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Kollar om spelaren nuddar marken
-        isGrounded = IsGrounded();
-
         HandleMovement();
         HandleSpriteFlipping();
     }
@@ -43,10 +38,14 @@ public class PlayerMovement : MonoBehaviour
         // HorizontalInput kan vara någonstans mellan -1 och 1, där -1 är full vänster, 0 är ingen rörelse och 1 är full höger
         horizontalInput = Input.GetAxis($"Horizontal - Player {PlayerID}");
 
-        // Kolla om spelaren trycker på hopp-knappen och se till att spelaren inte redan är i luften (isJumping)
-        if (Input.GetButton($"Jump - Player {PlayerID}") && isGrounded)
+        // Kolla om spelaren trycker på hopp-knappen
+        if (Input.GetButton($"Jump - Player {PlayerID}"))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+            // Hoppa uppåt om spelaren nuddar marken
+            if (IsGrounded())
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+            }
         }
     }
 
@@ -60,12 +59,13 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = false;
     }
 
+
     // Skjuter en osynlig laser rakt ner och letar efter marken. Om den träffar marken så är spelaren grounded
     private bool IsGrounded() => Physics2D.Raycast(transform.position, Vector2.down, GroundCheckDistance, GroundLayerMask);
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x + (horizontalInput * moveSpeed), rb.linearVelocity.y);
     }
 }
 
