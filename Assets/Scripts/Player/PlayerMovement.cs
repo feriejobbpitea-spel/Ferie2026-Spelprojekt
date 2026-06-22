@@ -12,13 +12,12 @@ public class PlayerMovement : MonoBehaviour
     // För att kolla om spelaren nuddar marken
     [SerializeField] private float GroundCheckDistance = 1;
     [SerializeField] private LayerMask GroundLayerMask;
+    [SerializeField] private float moveSpeed = 5.0F;
+    [SerializeField] private float jumpPower = 4.0F;
 
-
-    private Vector2 externalForces;
 
     float horizontalInput;
-    float moveSpeed = 5f;
-    float jumpPower = 4f;
+    Vector2 externalForces;
 
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;

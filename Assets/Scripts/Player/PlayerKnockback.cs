@@ -32,6 +32,6 @@ public class PlayerKnockback : MonoBehaviour
 
         Vector2 direction = (payload.Victim.transform.position - payload.Attacker.position).normalized;
         direction.y = 0;
-        playerMovement.ApplyForce(direction);
+        playerMovement.ApplyForce(direction * payload.DamageTaken);
     }
 }

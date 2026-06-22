@@ -120,8 +120,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2039934259
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 96136fdcd7f30434283c59edeac094b8, type: 3}
@@ -236,6 +236,8 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  moveSpeed: 5
+  jumpPower: 4
 --- !u!95 &2651478061627270701
 Animator:
   serializedVersion: 7
@@ -270,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050c5847b5cd2af458294628286c9e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  health: -52
+  health: 0
   maxHealth: 100
   healthBar: {fileID: 0}
 --- !u!114 &5308136236837756989

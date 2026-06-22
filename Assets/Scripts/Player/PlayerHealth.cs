@@ -11,11 +11,12 @@ public class PlayerHealth : MonoBehaviour
 
     public static event Action OnPlayerDied;
     public static event Action<PlayerHurtPayload> OnPlayerHurt;
+    public static event Action<PlayerHealth> OnPlayerHealthChanged;
 
     void Start()
     {
         health = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        OnPlayerHealthChanged?.Invoke(this);
     }
 
 
@@ -38,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
             health = maxHealth;
         }
 
-        healthBar.SetHealth(health);
+        //healthBar.SetHealth(health);
+        OnPlayerHealthChanged?.Invoke(this);
     }
 }   
