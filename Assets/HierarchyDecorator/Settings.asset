@@ -6027,5 +6027,80 @@ MonoBehaviour:
         isBuiltIn: 0
         script: {fileID: 11500000, guid: 4233fdc2242345f4eb82586807aac20d, type: 3}
         hasToggle: 1
+      - displayName: PlayerHurt_Feedback
+        name: PlayerHurt_Feedback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: PlayerHurt_Feedback
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayerHurt_Feedback
+          m_TextWithWhitespace: "PlayerHurt_Feedback\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 4a64c3b1575bb114aa20d8e8e5f22139, type: 3}
+        hasToggle: 1
+      - displayName: Player
+        name: Player, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: Player
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: Player
+          m_TextWithWhitespace: "Player\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 02a1ed58d168a414aa77ba030277871f, type: 3}
+        hasToggle: 1
+      - displayName: Weapon
+        name: Weapon, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: Weapon
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: Weapon
+          m_TextWithWhitespace: "Weapon\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: 92680669453faff47b17e26b783fa119, type: 3}
+        hasToggle: 1
+      - displayName: PlayerKnockback
+        name: PlayerKnockback, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: PlayerKnockback
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayerKnockback
+          m_TextWithWhitespace: "PlayerKnockback\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: e1bd65edba9592e42b6f65a52fc6bee1, type: 3}
+        hasToggle: 1
+      - displayName: PlayerAnimations
+        name: PlayerAnimations, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        content:
+          m_Text: PlayerAnimations
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: PlayerAnimations
+          m_TextWithWhitespace: "PlayerAnimations\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: be938d25995a4094a9b5d21de0aab394, type: 3}
+        hasToggle: 1
+      - displayName: Bullet
+        name: Bullet, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        content:
+          m_Text: Bullet
+          m_Image: {fileID: -8204150473280056172, guid: 0000000000000000d000000000000000, type: 0}
+          m_Tooltip: Bullet
+          m_TextWithWhitespace: "Bullet\u200B"
+        shown: 0
+        excluded: 0
+        isBuiltIn: 0
+        script: {fileID: 11500000, guid: a6f86f809bedbe0498117b81d2903244, type: 3}
+        hasToggle: 1
     unityVersion: 6000.4.10f1
     unityCount: 431
