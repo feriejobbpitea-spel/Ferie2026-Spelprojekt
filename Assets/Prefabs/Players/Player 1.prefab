@@ -266,11 +266,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   GroundCheckDistance: 0.56
+  GroundCheckWidth: 0.41
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 1
   moveSpeed: 4
   jumpPower: 5
+  horizontalInput: 0
 --- !u!95 &2651478061627270701
 Animator:
   serializedVersion: 7

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     // För att kolla om spelaren nuddar marken
     [SerializeField] private float GroundCheckDistance = 1;
+    [SerializeField] private float GroundCheckWidth = 1;
     [SerializeField] private LayerMask GroundLayerMask;
     [SerializeField] private float moveSpeed = 5.0F;
     [SerializeField] private float jumpPower = 4.0F;
@@ -79,12 +80,18 @@ public class PlayerMovement : MonoBehaviour
 
 
     // Skjuter en osynlig laser rakt ner och letar efter marken. Om den träffar marken så är spelaren grounded
-    private bool IsGrounded() => Physics2D.Raycast(transform.position, Vector2.down, GroundCheckDistance, GroundLayerMask);
+    private bool IsGrounded() => Physics2D.OverlapBox(transform.position + Vector3.down * GroundCheckDistance, new(GroundCheckWidth, 0.1F), 0, GroundLayerMask);
 
     private void FixedUpdate()
     {
         float multipliedInput = horizontalInput * moveSpeed;
         rb.linearVelocity = new Vector2(multipliedInput + externalForces.x, rb.linearVelocity.y + externalForces.y);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position + Vector3.down * GroundCheckDistance, new(GroundCheckWidth, 0.1F));
     }
 }
 
