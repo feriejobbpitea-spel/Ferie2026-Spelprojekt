@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: 0
-  maxHealth: 100
+  maxHealth: 670
   healthBar: {fileID: 0}
 --- !u!114 &5371871456530348200
 MonoBehaviour:
