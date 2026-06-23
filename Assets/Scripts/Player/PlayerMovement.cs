@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     Vector2 externalForces;
 
-    Rigidbody2D rb;
+    [HideInInspector]
+    public Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
 
     void Start()

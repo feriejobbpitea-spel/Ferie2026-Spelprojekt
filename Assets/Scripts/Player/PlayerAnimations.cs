@@ -5,9 +5,12 @@ public class PlayerAnimations : MonoBehaviour
 {
     private Animator animator;
 
+    private PlayerMovement playerMovement;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void OnEnable()
@@ -18,6 +21,11 @@ public class PlayerAnimations : MonoBehaviour
     private void OnDisable()
     {
         PlayerHealth.OnPlayerHurt -= OnTakeDamage;
+    }
+
+    private void Update()
+    {
+        animator.SetBool("IsMoving", playerMovement.rb.linearVelocity.sqrMagnitude > 1);
     }
 
     /// <summary>
