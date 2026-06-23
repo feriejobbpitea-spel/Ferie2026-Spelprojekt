@@ -13,6 +13,11 @@ public class PlayerAnimations : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
+    private void Start()
+    {
+        animator.speed = 0.25F;
+    }
+
     private void OnEnable()
     {
         PlayerHealth.OnPlayerHurt += OnTakeDamage;
@@ -25,7 +30,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void Update()
     {
-        animator.SetBool("IsMoving", playerMovement.rb.linearVelocity.sqrMagnitude > 1);
+        animator.SetBool("IsMoving", playerMovement.horizontalInput != 0);
     }
 
     /// <summary>

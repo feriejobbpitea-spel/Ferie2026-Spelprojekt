@@ -16,11 +16,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpPower = 4.0F;
 
 
-    float horizontalInput;
+    [HideInInspector]
+    public float horizontalInput;
     Vector2 externalForces;
 
-    [HideInInspector]
-    public Rigidbody2D rb;
+    Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
 
     void Start()
