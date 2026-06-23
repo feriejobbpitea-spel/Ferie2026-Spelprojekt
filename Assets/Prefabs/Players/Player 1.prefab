@@ -323,6 +323,10 @@ MonoBehaviour:
   Rplayer: {fileID: -2738824491799416245}
   firePoint: {fileID: 416973336598152857}
   bulletPrefab: {fileID: 4709703550948824702, guid: 57f2600792c3fc94f9c766cd80376df1, type: 3}
+  Player1Key: H
+  Player2Key: L
+  UI_Icon: {fileID: 21300000, guid: a4a80d7b9265daa4abb175dc4a2dc826, type: 3}
+  UI: {fileID: 0}
 --- !u!114 &1207166917699366438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c75b845dcf05274a9f9807068f4ab08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
+  attackFeedback: {fileID: 0}
   attackOrigin: {fileID: 9204101100345577375}
   attackRadius: 0.44
   enemyMask:
@@ -367,6 +372,11 @@ MonoBehaviour:
   ourPlayerHealth: {fileID: -2738824491799416245}
   attackDamage: 10
   cooldownTime: 5
+  InputString: Kick - Player
+  Player1Key: G
+  Player2Key: K
+  UI_Icon: {fileID: 7906261938431879622, guid: 2b79d2f2e82435e49a507d19ac433ae5, type: 3}
+  UI: {fileID: 0}
 --- !u!114 &4864380097091351081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c75b845dcf05274a9f9807068f4ab08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
+  attackFeedback: {fileID: 0}
   attackOrigin: {fileID: 4075210425754186942}
   attackRadius: 0.93
   enemyMask:
@@ -387,6 +398,11 @@ MonoBehaviour:
   ourPlayerHealth: {fileID: -2738824491799416245}
   attackDamage: 20
   cooldownTime: 3
+  InputString: Melee Combat - Player
+  Player1Key: F
+  Player2Key: J
+  UI_Icon: {fileID: 7666107085290159555, guid: 5dc626de1fcc69b44885afec9bb9cb7c, type: 3}
+  UI: {fileID: 0}
 --- !u!1 &8668670326865398594
 GameObject:
   m_ObjectHideFlags: 0

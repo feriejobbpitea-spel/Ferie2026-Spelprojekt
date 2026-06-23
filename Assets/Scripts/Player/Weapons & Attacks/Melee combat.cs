@@ -1,10 +1,9 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
-public class Meleecombat : MonoBehaviour
+public class Meleecombat : WeaponBase
 {
-    private int PlayerID => player.PlayerID;
-    private Player player;
+    private int PlayerID => Player.PlayerID;
 
     public Transform attackOrigin;
     public float attackRadius = 1f;
@@ -15,17 +14,35 @@ public class Meleecombat : MonoBehaviour
     public float cooldownTime = 5f;
     private float cooldownTimer = 0f;
 
-    private void Awake()
-    {
-        player = GetComponent<Player>();
-    }
+    public string InputString = $"Melee Combat - Player";
+
+    // Används för att kommunicera med UI_AttackFeedback för att uppdatera UI för vapen. T.ex. cooldowns, ammo, etc.
+    // ------------------------------------------------
+    [Header("UI")]
+    public string Player1Key = "F";
+    public string Player2Key = "K";
+    public Sprite UI_Icon;
+    [HideInInspector]
+    public UI_AttackFeedback UI;
+    // ------------------------------------------------
+
 
     private void Update()
     {
-        if (cooldownTimer <= 0) {
+        // Om UI existerar -> Uppdatera den med korrekt info!
+        if (UI != null) 
+        {
+            UI.Cooldown = cooldownTimer;
+            UI.MaxCooldown = cooldownTime;
+            UI.CurrentIcon = UI_Icon;
 
+            string keyToPress = PlayerID == 1 ? Player1Key : Player2Key;
+            UI.KeyToPress = keyToPress;
+        }
 
-            if (Input.GetButtonDown($"Melee Combat - Player {PlayerID}"))
+        if (cooldownTimer <= 0) 
+        {
+            if (Input.GetButtonDown($"{InputString} {PlayerID}"))
             {
                 Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
 
@@ -39,9 +56,7 @@ public class Meleecombat : MonoBehaviour
                     
                 }
                 cooldownTimer = cooldownTime;
-
             }
-
         }
         else
         {
