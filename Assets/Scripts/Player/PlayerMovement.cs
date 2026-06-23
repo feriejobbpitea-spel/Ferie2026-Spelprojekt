@@ -1,47 +1,89 @@
 using Unity.Netcode;
 using UnityEngine;
 
+[RequireComponent(typeof(Player))]
 public class PlayerMovement : MonoBehaviour
 {
     // Detta använder vi för att bestämma om vilka kontroller 
     // I Project Settings -> Input Manager har vi skapat "Horizontal - Player 1", "Horizontal - Player 2", "Jump - Player 1" och "Jump - Player 2"
-    [SerializeField] private int PlayerID = 0;
+    private int PlayerID => player.PlayerID;
+    private Player player;
+
+    // För att kolla om spelaren nuddar marken
+    [SerializeField] private float GroundCheckDistance = 1;
+    [SerializeField] private LayerMask GroundLayerMask;
+    [SerializeField] private float moveSpeed = 5.0F;
+    [SerializeField] private float jumpPower = 4.0F;
+
 
     float horizontalInput;
-    float moveSpeed = 5f;
-    float jumpPower = 4f;
-    bool isJumping = false;
+    Vector2 externalForces;
 
     Rigidbody2D rb;
+    SpriteRenderer spriteRenderer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        player = GetComponent<Player>();
     }
 
-  
+   
 
-     void Update()
+    void Update()
+    {
+        externalForces = Vector2.Lerp (externalForces, Vector2.zero, Time.deltaTime * 5);
+        Flip();
+        HandleMovement();
+        
+    }
+
+    private void HandleMovement() 
     {
         // Kolla input för A och D knapparna
         // HorizontalInput kan vara någonstans mellan -1 och 1, där -1 är full vänster, 0 är ingen rörelse och 1 är full höger
         horizontalInput = Input.GetAxis($"Horizontal - Player {PlayerID}");
 
-        // Kolla om spelaren trycker på hopp-knappen och se till att spelaren inte redan är i luften (isJumping)
-        if (Input.GetButtonDown($"Jump - Player {PlayerID}") && !isJumping)
+        // Kolla om spelaren trycker på hopp-knappen
+        if (Input.GetButton($"Jump - Player {PlayerID}"))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
-            isJumping = true;
+            // Hoppa uppåt om spelaren nuddar marken
+            if (IsGrounded())
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+            }
         }
     }
-    private void FixedUpdate()
+
+    public void ApplyForce(Vector2 force) 
     {
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        externalForces += force;
     }
 
-    private void OnCollisionEnter2D(Collision2D collider)
+   private void Flip()
     {
-        isJumping = false;
+        if (horizontalInput < 0)
+        {
+            transform.eulerAngles = new (0f, 180f, 0f);
+
+        }
+        if (horizontalInput > 0)
+        {
+            transform.eulerAngles = new(0f, 0, 0f);
+        }
+
+
+    }
+
+
+    // Skjuter en osynlig laser rakt ner och letar efter marken. Om den träffar marken så är spelaren grounded
+    private bool IsGrounded() => Physics2D.Raycast(transform.position, Vector2.down, GroundCheckDistance, GroundLayerMask);
+
+    private void FixedUpdate()
+    {
+        float multipliedInput = horizontalInput * moveSpeed;
+        rb.linearVelocity = new Vector2(multipliedInput + externalForces.x, rb.linearVelocity.y + externalForces.y);
     }
 }
 
