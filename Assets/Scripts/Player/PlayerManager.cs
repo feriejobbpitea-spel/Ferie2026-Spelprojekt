@@ -27,7 +27,10 @@ public class PlayerManager : Singleton<PlayerManager>
 
         SpawnPlayer(PlayerPrefabs[player1ID], 1);
         SpawnPlayer(PlayerPrefabs[player2ID], 2);
+    }
 
+    private void Start()
+    {
         StartCoroutine(NewRoundManager());
     }
 
@@ -55,9 +58,16 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         PrepareNextRound();
 
+        if(BeginRoundDialogue.Instance == null) 
+        {
+            Debug.LogError($"Lägg till scriptet '{nameof(BeginRoundDialogue)}' i scenen.");
+        }
+
         // Spela ljud för båda spelarna
         foreach (var player in SpawnedPlayers)
         {
+            if (player.Key == null)
+                continue;
             float timeToWait = BeginRoundDialogue.Instance.PlayAudio(player.Key.PlayerID);
             yield return new WaitForSeconds(timeToWait);
         }

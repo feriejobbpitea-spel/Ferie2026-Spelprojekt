@@ -8,6 +8,11 @@ public class BeginRoundDialogue : Singleton<BeginRoundDialogue>
 {
     [SerializeField] private SerializedDictionary<Player, List<AudioWithSubtitles>> AudioToPlay = new();
 
+    protected override void Awake()
+    {
+        base.Awake();
+    }
+
     public float PlayAudio(int playerID) 
     {
         var spawnedPlayers = PlayerManager.Instance.SpawnedPlayers;

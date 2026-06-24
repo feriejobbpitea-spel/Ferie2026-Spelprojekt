@@ -378,7 +378,7 @@ MonoBehaviour:
   InputString: Kick - Player
   Player1Key: G
   Player2Key: K
-  UI_Icon: {fileID: 7906261938431879622, guid: 2b79d2f2e82435e49a507d19ac433ae5, type: 3}
+  UI_Icon: {fileID: 21300000, guid: aeefc27109404134d88a2b2e1f306598, type: 3}
   UI: {fileID: 0}
 --- !u!114 &4864380097091351081
 MonoBehaviour:
@@ -404,7 +404,7 @@ MonoBehaviour:
   InputString: Melee Combat - Player
   Player1Key: F
   Player2Key: J
-  UI_Icon: {fileID: 7666107085290159555, guid: 5dc626de1fcc69b44885afec9bb9cb7c, type: 3}
+  UI_Icon: {fileID: 21300000, guid: 748599c8b4ec29b49a7a06b8234c1510, type: 3}
   UI: {fileID: 0}
 --- !u!1 &8668670326865398594
 GameObject:

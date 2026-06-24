@@ -2729,6 +2729,14 @@ MonoBehaviour:
       Value:
       - {fileID: 11400000, guid: c90998ab9a42eea40b5028903b930d6e, type: 2}
       - {fileID: 11400000, guid: d347ec10733bcdc409e374b519e14667, type: 2}
+    - Key: {fileID: 1115376217604938688, guid: e983f8377884a644cb9ac5d9f3d2f68a, type: 3}
+      Value:
+      - {fileID: 11400000, guid: c90998ab9a42eea40b5028903b930d6e, type: 2}
+      - {fileID: 11400000, guid: d347ec10733bcdc409e374b519e14667, type: 2}
+    - Key: {fileID: 1115376217604938688, guid: 33d584547141d944184df421968d787f, type: 3}
+      Value:
+      - {fileID: 11400000, guid: c90998ab9a42eea40b5028903b930d6e, type: 2}
+      - {fileID: 11400000, guid: d347ec10733bcdc409e374b519e14667, type: 2}
 --- !u!1 &1521088334
 GameObject:
   m_ObjectHideFlags: 0
