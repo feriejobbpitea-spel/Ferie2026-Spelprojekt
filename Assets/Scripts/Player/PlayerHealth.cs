@@ -39,6 +39,15 @@ public class PlayerHealth : MonoBehaviour
             PlayerManager.Instance.OnPlayerDeath(gameObject);
             OnPlayerDied?.Invoke(this);
             health = maxHealth;
+            if (PlayerID == 1) {
+             ScoreBoard.instance.KillCount1 += 1;
+            ScoreBoard.instance.UpdateKillCounterUI();
+            }
+            if (PlayerID == 2)
+            {
+                ScoreBoard.instance.KillCount2 += 1;
+                ScoreBoard.instance.UpdateKillCounterUI();
+            }
         }
 
         //healthBar.SetHealth(health);
