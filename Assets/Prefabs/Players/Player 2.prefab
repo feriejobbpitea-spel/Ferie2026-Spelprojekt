@@ -16,10 +16,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2821278706121033750, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: jumpPower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821278706121033750, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3395570665020629262, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: attackDamage
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 7159717833775409627, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_Name
       value: Player 2

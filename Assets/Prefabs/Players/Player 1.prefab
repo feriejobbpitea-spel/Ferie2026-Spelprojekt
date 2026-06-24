@@ -271,8 +271,8 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 1
-  moveSpeed: 4
-  jumpPower: 5
+  moveSpeed: 2
+  jumpPower: 4
   horizontalInput: 0
 --- !u!95 &2651478061627270701
 Animator:
@@ -373,7 +373,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   ourPlayerHealth: {fileID: -2738824491799416245}
-  attackDamage: 10
+  attackDamage: 75
   cooldownTime: 5
   InputString: Kick - Player
   Player1Key: G
@@ -399,7 +399,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   ourPlayerHealth: {fileID: -2738824491799416245}
-  attackDamage: 20
+  attackDamage: 60
   cooldownTime: 3
   InputString: Melee Combat - Player
   Player1Key: F
