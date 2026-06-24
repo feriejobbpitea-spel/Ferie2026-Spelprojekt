@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerManager : Singleton<PlayerManager>
@@ -20,8 +21,19 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void SpawnPlayer(Player playerPrefab, int ownerID) 
     {
+        // Hitta all objekt med scriptet "spawnpoint" i scenen
+        var allSpawnPoints = GameObject.FindObjectsByType<Spawnpoint>();
+        // Välj en slumpmässig en
+        var randomSpawnPoint = allSpawnPoints.ElementAtOrDefault(new System.Random().Next() % allSpawnPoints.Count());
+
+        Vector2 spawnPosition = Vector2.zero;
+
+        // Om det finns en spawnpoint så sätter vi spawn position till den
+        if (randomSpawnPoint != null)
+            spawnPosition = randomSpawnPoint.transform.position;
+
         // Skapa en ny spelare
-        var newPlayer = GameObject.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+        var newPlayer = GameObject.Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
 
         // Assigna spelarens ID så att den vet vilken input den ska lyssna på
         newPlayer.PlayerID = ownerID;

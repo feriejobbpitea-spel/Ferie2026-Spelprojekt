@@ -7,9 +7,11 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth = 10;
 
+    public int PlayerID => GetComponent<Player>().PlayerID;
+
     public HealthBar healthBar;
 
-    public static event Action OnPlayerDied;
+    public static event Action<PlayerHealth> OnPlayerDied;
     public static event Action<PlayerHurtPayload> OnPlayerHurt;
     public static event Action<PlayerHealth> OnPlayerHealthChanged;
 
@@ -35,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             PlayerManager.Instance.OnPlayerDeath(gameObject);
-            OnPlayerDied?.Invoke();
+            OnPlayerDied?.Invoke(this);
             health = maxHealth;
         }
 

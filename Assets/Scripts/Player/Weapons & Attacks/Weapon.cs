@@ -12,6 +12,16 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
+    // Används för att kommunicera med UI_AttackFeedback för att uppdatera UI för vapen. T.ex. cooldowns, ammo, etc.
+    // ------------------------------------------------
+    [Header("UI")]
+    public string Player1Key = "F";
+    public string Player2Key = "K";
+    public Sprite UI_Icon;
+    [HideInInspector]
+    public UI_AttackFeedback UI;
+    // ------------------------------------------------
+
     private void Awake()
     {
         player = GetComponent<Player>();
@@ -24,7 +34,18 @@ public class Weapon : MonoBehaviour
     
     void Update()
     {
-       if (cooldownTimer <= 0)
+        // Om UI existerar -> Uppdatera den med korrekt info!
+        if (UI != null)
+        {
+            UI.Cooldown = cooldownTimer;
+            UI.MaxCooldown = cooldownTime;
+            UI.CurrentIcon = UI_Icon;
+
+            string keyToPress = PlayerID == 1 ? Player1Key : Player2Key;
+            UI.KeyToPress = keyToPress;
+        }
+
+        if (cooldownTimer <= 0)
        {
 
 
