@@ -39,7 +39,7 @@ public class Meleecombat : WeaponBase
             string keyToPress = PlayerID == 1 ? Player1Key : Player2Key;
             UI.KeyToPress = keyToPress;
         }
-
+        
         if (cooldownTimer <= 0) 
         {
             if (Input.GetButtonDown($"{InputString} {PlayerID}"))

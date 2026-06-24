@@ -88,7 +88,9 @@ public class PlayerManager : Singleton<PlayerManager>
          
             // Slumpa deras position
             player.Key.transform.position = GetRandomSpawnPosition(player.Key.PlayerID);
-            
+
+            player.Key.GetComponent<PlayerHealth>().ResetPlayerHealth();
+
             player.Key.gameObject.SetActive(true);
 
             player.Key.CanMove = false;
@@ -112,12 +114,16 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private Vector3 GetRandomSpawnPosition(int playerID) 
     {
+        Vector2 spawnPosition = Vector2.zero;
+
         // Hitta all objekt med scriptet "spawnpoint" i scenen
         var allSpawnPoints = GameObject.FindObjectsByType<Spawnpoint>().Where(x => x.ID == playerID).ToList();
+        if(allSpawnPoints.Count <= 0)
+            return spawnPosition;
+
         // Välj en slumpmässig en
         var randomSpawnPoint = allSpawnPoints.GetRandom();
 
-        Vector2 spawnPosition = Vector2.zero;
 
         // Om det finns en spawnpoint så sätter vi spawn position till den
         if (randomSpawnPoint != null)
