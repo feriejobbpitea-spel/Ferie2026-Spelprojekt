@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   PlayerID: 1
+  CanMove: 1
 --- !u!114 &2821278706121033750
 MonoBehaviour:
   m_ObjectHideFlags: 0

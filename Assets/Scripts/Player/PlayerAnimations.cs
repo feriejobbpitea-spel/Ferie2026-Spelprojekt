@@ -20,17 +20,39 @@ public class PlayerAnimations : MonoBehaviour
 
     private void OnEnable()
     {
+        playerMovement.OnJumped += Player_Jumped;
+        playerMovement.OnReachedPeak += Player_ReachedPeak;
+        playerMovement.OnLanded += Player_Landed;
+
         PlayerHealth.OnPlayerHurt += OnTakeDamage;
     }
 
     private void OnDisable()
     {
+        playerMovement.OnJumped -= Player_Jumped;
+        playerMovement.OnReachedPeak -= Player_ReachedPeak;
+
         PlayerHealth.OnPlayerHurt -= OnTakeDamage;
     }
 
     private void Update()
     {
         animator.SetBool("IsMoving", playerMovement.horizontalInput != 0);
+    }
+
+    private void Player_Landed()
+    {
+        animator.SetTrigger("HasLanded");
+    }
+
+    private void Player_ReachedPeak()
+    {
+        animator.SetTrigger("HasReachedPeakJump");
+    }
+
+    private void Player_Jumped()
+    {
+        animator.SetTrigger("HasJumped");
     }
 
     /// <summary>

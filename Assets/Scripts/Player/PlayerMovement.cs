@@ -1,3 +1,4 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -20,9 +21,16 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public float horizontalInput;
     Vector2 externalForces;
+    bool hasJumped;
+    bool hasAlreadyReachedPeak;
 
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
+
+
+    public Action OnJumped;
+    public Action OnReachedPeak;
+    public Action OnLanded;
 
     void Start()
     {
@@ -46,14 +54,35 @@ public class PlayerMovement : MonoBehaviour
         // Kolla input för A och D knapparna
         // HorizontalInput kan vara någonstans mellan -1 och 1, där -1 är full vänster, 0 är ingen rörelse och 1 är full höger
         horizontalInput = Input.GetAxis($"Horizontal - Player {PlayerID}");
+        if (!player.CanMove)
+            horizontalInput = 0;
+
+        // Här kollar vi om vi landat
+        if(hasJumped && IsGrounded()) 
+        {
+            hasAlreadyReachedPeak = false;
+            hasJumped = false;
+            OnLanded?.Invoke();
+        }
+
+        // Här kollar vi om vi nått maximala höjden i hoppet
+        // Alltså då våran velocititet på y riktningen blir negativ
+        if (hasJumped && rb.linearVelocity.y < 0 && !hasAlreadyReachedPeak) 
+        {
+            hasAlreadyReachedPeak = true;
+            OnReachedPeak?.Invoke();
+        }
 
         // Kolla om spelaren trycker på hopp-knappen
-        if (Input.GetButton($"Jump - Player {PlayerID}"))
+        // kollar också om spelaren kan röra på sig
+        if (Input.GetButton($"Jump - Player {PlayerID}") && player.CanMove)
         {
             // Hoppa uppåt om spelaren nuddar marken
             if (IsGrounded())
             {
+                hasJumped = true;
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+                OnJumped?.Invoke();
             }
         }
     }
