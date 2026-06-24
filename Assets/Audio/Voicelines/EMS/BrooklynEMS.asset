@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ed8212562033c40b9341e7f1174c5d, type: 3}
-  m_Name: EMS_Brooklyn
+  m_Name: BrooklynEMS
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
   AudioClip: {fileID: 8300000, guid: 7acceeef002a3a54bbdfe3b45bccb600, type: 3}
   Text: I came from Brooklyn!
