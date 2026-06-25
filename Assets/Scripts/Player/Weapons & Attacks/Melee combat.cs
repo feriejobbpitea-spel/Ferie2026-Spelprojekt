@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
@@ -29,6 +30,10 @@ public class Meleecombat : WeaponBase
     public UI_AttackFeedback UI;
     // ------------------------------------------------
 
+    // --- VFX ---
+    public GameObject VFX;
+    public float disableVFXAfterTime = 3;
+
 
     private void Update()
     {
@@ -47,19 +52,7 @@ public class Meleecombat : WeaponBase
         {
             if (Input.GetButtonDown($"{InputString} {PlayerID}"))
             {
-                GetComponent<PlayerAnimations>().Animator.SetTrigger(AnimationString);
-
-                Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
-
-                foreach (var enemy in enemiesInRange)
-                {
-                    PlayerHealth enemyplayerHealth = enemy.GetComponent<PlayerHealth>();
-                    if (enemyplayerHealth == ourPlayerHealth)
-                        continue;
-
-                    enemyplayerHealth.TakeDamage(attackDamage, this.transform);
-                    
-                }
+                Attack();
                 cooldownTimer = cooldownTime;
             }
         }
@@ -69,6 +62,35 @@ public class Meleecombat : WeaponBase
         }
     }
     
+    private void Attack() 
+    {
+        if(VFX != null) 
+        {
+            StartCoroutine(EnableAndDisableVFX());
+        }
+
+        GetComponent<PlayerAnimations>().Animator.SetTrigger(AnimationString);
+
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
+
+        foreach (var enemy in enemiesInRange)
+        {
+            PlayerHealth enemyplayerHealth = enemy.GetComponent<PlayerHealth>();
+            if (enemyplayerHealth == ourPlayerHealth)
+                continue;
+
+            enemyplayerHealth.TakeDamage(attackDamage, this.transform);
+
+        }
+    }
+
+    private IEnumerator EnableAndDisableVFX() 
+    {
+        VFX.SetActive(true);
+        yield return new WaitForSeconds(disableVFXAfterTime);
+        VFX.SetActive(false);
+    }
+
     
     private void OnDrawGizmos()
     {

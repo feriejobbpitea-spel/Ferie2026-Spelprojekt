@@ -180,6 +180,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -187,10 +200,10 @@ TextureImporter:
       name: slash_0
       rect:
         serializedVersion: 2
-        x: 526
-        y: 8
-        width: 20
-        height: 27
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +222,10 @@ TextureImporter:
       name: slash_1
       rect:
         serializedVersion: 2
-        x: 593
-        y: 8
-        width: 17
-        height: 29
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +244,10 @@ TextureImporter:
       name: slash_2
       rect:
         serializedVersion: 2
-        x: 657
-        y: 10
-        width: 17
-        height: 27
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +266,10 @@ TextureImporter:
       name: slash_3
       rect:
         serializedVersion: 2
-        x: 673
-        y: 14
-        width: 5
-        height: 21
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +288,10 @@ TextureImporter:
       name: slash_4
       rect:
         serializedVersion: 2
-        x: 716
-        y: 15
-        width: 22
-        height: 22
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +310,10 @@ TextureImporter:
       name: slash_5
       rect:
         serializedVersion: 2
-        x: 736
-        y: 19
-        width: 6
-        height: 18
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -319,10 +332,10 @@ TextureImporter:
       name: slash_6
       rect:
         serializedVersion: 2
-        x: 777
-        y: 17
-        width: 25
-        height: 20
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +354,10 @@ TextureImporter:
       name: slash_7
       rect:
         serializedVersion: 2
-        x: 798
-        y: 26
-        width: 8
-        height: 13
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,10 +376,10 @@ TextureImporter:
       name: slash_8
       rect:
         serializedVersion: 2
-        x: 839
-        y: 19
-        width: 27
-        height: 18
+        x: 512
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -385,10 +398,10 @@ TextureImporter:
       name: slash_9
       rect:
         serializedVersion: 2
-        x: 862
-        y: 30
-        width: 7
-        height: 9
+        x: 576
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,10 +420,10 @@ TextureImporter:
       name: slash_10
       rect:
         serializedVersion: 2
-        x: 903
-        y: 24
-        width: 27
-        height: 13
+        x: 640
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,10 +442,10 @@ TextureImporter:
       name: slash_11
       rect:
         serializedVersion: 2
-        x: 926
-        y: 34
-        width: 5
-        height: 5
+        x: 704
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,10 +464,10 @@ TextureImporter:
       name: slash_12
       rect:
         serializedVersion: 2
-        x: 967
-        y: 27
-        width: 27
-        height: 12
+        x: 768
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,10 +486,10 @@ TextureImporter:
       name: slash_13
       rect:
         serializedVersion: 2
-        x: 1031
-        y: 27
-        width: 25
-        height: 10
+        x: 832
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,10 +508,10 @@ TextureImporter:
       name: slash_14
       rect:
         serializedVersion: 2
-        x: 1095
-        y: 27
-        width: 20
-        height: 10
+        x: 896
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,10 +530,10 @@ TextureImporter:
       name: slash_15
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 27
-        width: 12
-        height: 10
+        x: 960
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,10 +552,10 @@ TextureImporter:
       name: slash_16
       rect:
         serializedVersion: 2
-        x: 1223
-        y: 27
-        width: 8
-        height: 7
+        x: 1024
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,10 +574,10 @@ TextureImporter:
       name: slash_17
       rect:
         serializedVersion: 2
-        x: 461
-        y: 8
-        width: 21
-        height: 21
+        x: 1088
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,10 +596,10 @@ TextureImporter:
       name: slash_18
       rect:
         serializedVersion: 2
-        x: 545
-        y: 14
-        width: 5
-        height: 17
+        x: 1152
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,10 +618,10 @@ TextureImporter:
       name: slash_19
       rect:
         serializedVersion: 2
-        x: 609
-        y: 14
-        width: 5
-        height: 17
+        x: 1216
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,10 +640,10 @@ TextureImporter:
       name: slash_20
       rect:
         serializedVersion: 2
-        x: 1287
-        y: 27
-        width: 6
-        height: 4
+        x: 1280
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -641,182 +654,6 @@ TextureImporter:
       bones: []
       spriteID: 9d398148aa3232900800000000000000
       internalID: 658409185793840089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_21
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 9
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da5458010742c2850800000000000000
-      internalID: 6353493238045033901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_22
-      rect:
-        serializedVersion: 2
-        x: 77
-        y: 8
-        width: 10
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94978e3135efeb1a0800000000000000
-      internalID: -6791711555258386103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_23
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 8
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5fa9b5fd18964b400800000000000000
-      internalID: 339011878478650101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_24
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 8
-        width: 16
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d71207b00a3e63290800000000000000
-      internalID: -7910885418903527043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_25
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 8
-        width: 17
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4225c1b2a4c94a4f0800000000000000
-      internalID: -818357389909798364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_26
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 8
-        width: 19
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 00c3a830b11c55360800000000000000
-      internalID: 7157839504542940160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_27
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 8
-        width: 21
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6d75f28a569eeefe0800000000000000
-      internalID: -1157731431364995114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_28
-      rect:
-        serializedVersion: 2
-        x: 481
-        y: 14
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d5ab798e946bc8190800000000000000
-      internalID: -7958786012919383459
       vertices: []
       indices: 
       edges: []
@@ -835,7 +672,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       slash_0: -6939695964637348897
       slash_1: 4408985956767555964
@@ -851,14 +688,6 @@ TextureImporter:
       slash_19: -3980888878710062537
       slash_2: 2816895114182060562
       slash_20: 658409185793840089
-      slash_21: 6353493238045033901
-      slash_22: -6791711555258386103
-      slash_23: 339011878478650101
-      slash_24: -7910885418903527043
-      slash_25: -818357389909798364
-      slash_26: 7157839504542940160
-      slash_27: -1157731431364995114
-      slash_28: -7958786012919383459
       slash_3: -2247918224548019269
       slash_4: 6283147460232431772
       slash_5: -2431866622470065252
