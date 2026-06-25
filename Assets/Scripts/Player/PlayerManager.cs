@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,54 +9,132 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] private List<Player> PlayerPrefabs = new();
 
     // Call-a från "character select skärmen" för att välja en prefab för varje spelare, så att vi kan spawna rätt karaktär när spelet startar
-    public static int player1ID = 0;
-    public static int player2ID = 0;
+    public static int player1ID = 3;
+    public static int player2ID = 1;
+
+    // Key = Styrande spelaren
+    // Value = Prefab för spelaren
+    public Dictionary<Player, Player> SpawnedPlayers = new();
+
+    public static Action OnRoundPrepared;
+    public static Action OnRoundStart;
 
     protected override void Awake()
     {
         base.Awake();
 
+        SpawnedPlayers.Clear();
+
+      /*  if (player1ID < 0)
+            player1ID = UnityEngine.Random.Range(0, PlayerPrefabs.Count);
+
+        if (player2ID < 0)
+            player2ID = UnityEngine.Random.Range(0, PlayerPrefabs.Count);*/
+
         SpawnPlayer(PlayerPrefabs[player1ID], 1);
         SpawnPlayer(PlayerPrefabs[player2ID], 2);
     }
 
+    private void Start()
+    {
+        StartCoroutine(NewRoundManager());
+    }
+
     public void SpawnPlayer(Player playerPrefab, int ownerID) 
     {
-        // Hitta all objekt med scriptet "spawnpoint" i scenen
-        var allSpawnPoints = GameObject.FindObjectsByType<Spawnpoint>();
-        // Välj en slumpmässig en
-        var randomSpawnPoint = allSpawnPoints.ElementAtOrDefault(new System.Random().Next() % allSpawnPoints.Count());
-
-        Vector2 spawnPosition = Vector2.zero;
-
-        // Om det finns en spawnpoint så sätter vi spawn position till den
-        if (randomSpawnPoint != null)
-            spawnPosition = randomSpawnPoint.transform.position;
+        Vector3 spawnPosition = Vector2.zero;
 
         // Skapa en ny spelare
         var newPlayer = GameObject.Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
+        newPlayer.name = $"Player {ownerID} ({playerPrefab.name})";
 
         // Assigna spelarens ID så att den vet vilken input den ska lyssna på
         newPlayer.PlayerID = ownerID;
+
+        SpawnedPlayers.Add(newPlayer, playerPrefab);
     }
 
     public void OnPlayerDeath(GameObject Player)
     {
         Player.SetActive(false);
-        StartCoroutine(Wait(Player));
+        StartCoroutine(NewRoundManager());
     }
    
-    private IEnumerator Wait(GameObject Player) 
+    private IEnumerator NewRoundManager() 
     {
-        yield return new WaitForSeconds(5);
-        OnPlayerRespawn(Player);
-    }
-   
-    private void OnPlayerRespawn(GameObject Player)
-    {
-        // Återställ spelarens position till 0, 0
-        Player.transform.position = Vector3.zero;
+        PrepareNextRound();
 
-        Player.SetActive(true);
+        if(BeginRoundDialogue.Instance == null) 
+        {
+            Debug.LogError($"Lägg till scriptet '{nameof(BeginRoundDialogue)}' i scenen.");
+        }
+
+        // Spela ljud för båda spelarna
+        foreach (var player in SpawnedPlayers)
+        {
+            if (player.Key == null)
+                continue;
+            float timeToWait = BeginRoundDialogue.Instance.PlayAudio(player.Key.PlayerID);
+            yield return new WaitForSeconds(timeToWait);
+        }
+
+        yield return new WaitForSeconds(1);
+        StartRound();
+    }
+
+    /// <summary>
+    /// Förbered för rundan som kommer
+    /// </summary>
+    private void PrepareNextRound()
+    {
+        // Återställ spelaren
+        foreach (var player in SpawnedPlayers)
+        {
+            player.Key.gameObject.SetActive(false);
+         
+            // Slumpa deras position
+            player.Key.transform.position = GetRandomSpawnPosition(player.Key.PlayerID);
+
+            player.Key.GetComponent<PlayerHealth>().ResetPlayerHealth();
+
+            player.Key.gameObject.SetActive(true);
+
+            player.Key.CanMove = false;
+        }
+
+        OnRoundPrepared?.Invoke();
+    }
+
+    /// <summary>
+    /// Startar rundan på riktigt
+    /// </summary>
+    private void StartRound() 
+    {
+        foreach (var player in SpawnedPlayers)
+        {
+            player.Key.CanMove = true;
+        }
+
+        OnRoundStart?.Invoke();   
+    }
+
+    private Vector3 GetRandomSpawnPosition(int playerID) 
+    {
+        Vector2 spawnPosition = Vector2.zero;
+
+        // Hitta all objekt med scriptet "spawnpoint" i scenen
+        var allSpawnPoints = GameObject.FindObjectsByType<Spawnpoint>().Where(x => x.ID == playerID).ToList();
+        if(allSpawnPoints.Count <= 0)
+            return spawnPosition;
+
+        // Välj en slumpmässig en
+        var randomSpawnPoint = allSpawnPoints.GetRandom();
+
+
+        // Om det finns en spawnpoint så sätter vi spawn position till den
+        if (randomSpawnPoint != null)
+            spawnPosition = randomSpawnPoint.transform.position;
+
+        return spawnPosition;
     }
 }

@@ -3,35 +3,54 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
-    private Animator animator;
+    [HideInInspector]
+    public Animator Animator;
 
     private PlayerMovement playerMovement;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Start()
     {
-        animator.speed = 0.25F;
+        Animator.speed = 0.25F;
     }
 
     private void OnEnable()
     {
+        playerMovement.OnJumped += Player_Jumped;
+        playerMovement.OnLanded += Player_Landed;
+
         PlayerHealth.OnPlayerHurt += OnTakeDamage;
     }
 
     private void OnDisable()
     {
+        playerMovement.OnJumped -= Player_Jumped;
+        playerMovement.OnLanded -= Player_Landed;
+
         PlayerHealth.OnPlayerHurt -= OnTakeDamage;
     }
 
     private void Update()
     {
-        animator.SetBool("IsMoving", playerMovement.horizontalInput != 0);
+        Animator.SetBool("IsFalling", playerMovement.IsFalling());
+        Animator.SetBool("IsMoving", playerMovement.horizontalInput != 0);
     }
+
+    private void Player_Landed()
+    {
+        Animator.SetTrigger("HasLanded");
+    }
+
+    private void Player_Jumped()
+    {
+        Animator.SetTrigger("Jump");
+    }
+
 
     /// <summary>
     /// Körs då spelaren tar skada
@@ -41,6 +60,6 @@ public class PlayerAnimations : MonoBehaviour
         if (payload.Victim.transform != this.transform)
             return;
 
-        animator.SetTrigger($"Hurt");
+        Animator.SetTrigger($"Hurt");
     }
 }

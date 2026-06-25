@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
 
     public int PlayerID = 1;
 
+    [HideInInspector]
+    public bool CanMove = true;
+
     public void Start()
     {
         OnCreated?.Invoke(this);

@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class Spawnpoint : MonoBehaviour
 {
-    
+    public int ID;
 }

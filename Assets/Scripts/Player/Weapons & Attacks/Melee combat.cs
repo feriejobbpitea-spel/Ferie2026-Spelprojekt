@@ -14,6 +14,9 @@ public class Meleecombat : WeaponBase
     public float cooldownTime = 5f;
     private float cooldownTimer = 0f;
 
+    // Om attacken har en animation kan vi definera det här
+    public string AnimationString = "Melee Attack";
+
     public string InputString = $"Melee Combat - Player";
 
     // Används för att kommunicera med UI_AttackFeedback för att uppdatera UI för vapen. T.ex. cooldowns, ammo, etc.
@@ -39,11 +42,13 @@ public class Meleecombat : WeaponBase
             string keyToPress = PlayerID == 1 ? Player1Key : Player2Key;
             UI.KeyToPress = keyToPress;
         }
-
+        
         if (cooldownTimer <= 0) 
         {
             if (Input.GetButtonDown($"{InputString} {PlayerID}"))
             {
+                GetComponent<PlayerAnimations>().Animator.SetTrigger(AnimationString);
+
                 Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(attackOrigin.position, attackRadius, enemyMask);
 
                 foreach (var enemy in enemiesInRange)
