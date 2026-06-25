@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // Kolla input för A och D knapparna
         // HorizontalInput kan vara någonstans mellan -1 och 1, där -1 är full vänster, 0 är ingen rörelse och 1 är full höger
-        horizontalInput = Input.GetAxis($"Horizontal - Player {PlayerID}");
+        horizontalInput = Input.GetAxisRaw($"Horizontal - Player {PlayerID}");
         if (!player.CanMove)
             horizontalInput = 0;
 
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Här kollar vi om vi nått maximala höjden i hoppet
         // Alltså då våran velocititet på y riktningen blir negativ
-        if (hasJumped && rb.linearVelocity.y < 0 && !hasAlreadyReachedPeak) 
+        if (hasJumped && IsFalling() && !hasAlreadyReachedPeak) 
         {
             hasAlreadyReachedPeak = true;
             OnReachedPeak?.Invoke();
@@ -77,8 +77,8 @@ public class PlayerMovement : MonoBehaviour
         // kollar också om spelaren kan röra på sig
         if (Input.GetButton($"Jump - Player {PlayerID}") && player.CanMove)
         {
-            // Hoppa uppåt om spelaren nuddar marken
-            if (IsGrounded())
+            // Hoppa uppåt om spelaren nuddar marken och om spelarn inte har hoppat
+            if (IsGrounded() && !hasJumped)
             {
                 hasJumped = true;
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
@@ -110,6 +110,8 @@ public class PlayerMovement : MonoBehaviour
 
     // Skjuter en osynlig laser rakt ner och letar efter marken. Om den träffar marken så är spelaren grounded
     private bool IsGrounded() => Physics2D.OverlapBox(transform.position + Vector3.down * GroundCheckDistance, new(GroundCheckWidth, 0.1F), 0, GroundLayerMask);
+
+    public bool IsFalling() => rb.linearVelocity.y < 0 && !IsGrounded();
 
     private void FixedUpdate()
     {

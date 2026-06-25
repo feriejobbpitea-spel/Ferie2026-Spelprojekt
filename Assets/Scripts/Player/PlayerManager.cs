@@ -9,8 +9,8 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] private List<Player> PlayerPrefabs = new();
 
     // Call-a från "character select skärmen" för att välja en prefab för varje spelare, så att vi kan spawna rätt karaktär när spelet startar
-    public static int player1ID = 0;
-    public static int player2ID = 0;
+    public static int player1ID = 3;
+    public static int player2ID = 1;
 
     // Key = Styrande spelaren
     // Value = Prefab för spelaren
@@ -24,6 +24,12 @@ public class PlayerManager : Singleton<PlayerManager>
         base.Awake();
 
         SpawnedPlayers.Clear();
+
+      /*  if (player1ID < 0)
+            player1ID = UnityEngine.Random.Range(0, PlayerPrefabs.Count);
+
+        if (player2ID < 0)
+            player2ID = UnityEngine.Random.Range(0, PlayerPrefabs.Count);*/
 
         SpawnPlayer(PlayerPrefabs[player1ID], 1);
         SpawnPlayer(PlayerPrefabs[player2ID], 2);

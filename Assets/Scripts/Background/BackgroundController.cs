@@ -3,9 +3,14 @@ using UnityEngine;
 public class BackgroundController : MonoBehaviour
 {
     private float startPos;
-    public GameObject cam;
+    private GameObject cam;
     public float parallaxEffects;
-   
+
+    private void Awake()
+    {
+        cam = Camera.main.gameObject;
+    }
+
     void Start()
     {
         startPos = transform.position.x;

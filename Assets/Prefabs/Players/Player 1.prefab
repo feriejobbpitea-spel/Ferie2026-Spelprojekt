@@ -328,7 +328,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4709703550948824702, guid: 57f2600792c3fc94f9c766cd80376df1, type: 3}
   Player1Key: H
   Player2Key: L
-  UI_Icon: {fileID: 21300000, guid: a4a80d7b9265daa4abb175dc4a2dc826, type: 3}
+  UI_Icon: {fileID: 21300000, guid: c61b0e94c37bd124095786717f3e39bc, type: 3}
   UI: {fileID: 0}
 --- !u!114 &1207166917699366438
 MonoBehaviour:
@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be938d25995a4094a9b5d21de0aab394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimations
+  Animator: {fileID: 0}
 --- !u!114 &5308136236837756989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +376,7 @@ MonoBehaviour:
   ourPlayerHealth: {fileID: -2738824491799416245}
   attackDamage: 75
   cooldownTime: 5
+  AnimationString: Kick
   InputString: Kick - Player
   Player1Key: G
   Player2Key: K
@@ -401,6 +403,7 @@ MonoBehaviour:
   ourPlayerHealth: {fileID: -2738824491799416245}
   attackDamage: 60
   cooldownTime: 3
+  AnimationString: Slash
   InputString: Melee Combat - Player
   Player1Key: F
   Player2Key: J
