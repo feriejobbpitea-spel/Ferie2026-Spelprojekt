@@ -57,11 +57,15 @@ public class PlayerMovement : MonoBehaviour
         if (!player.CanMove)
             horizontalInput = 0;
 
-        // Här kollar vi om vi landat
         if(hasJumped && IsGrounded()) 
         {
-            hasAlreadyReachedPeak = false;
             hasJumped = false;
+        }
+
+        // Här kollar vi om vi landat
+        if (IsGrounded() && hasJumped && hasAlreadyReachedPeak) 
+        {
+            hasAlreadyReachedPeak = false;
             OnLanded?.Invoke();
         }
 

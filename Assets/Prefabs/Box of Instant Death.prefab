@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1187248547731285372}
   - component: {fileID: 5425757495986763729}
   - component: {fileID: 5093574789356218919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Box of Instant Death
   m_TagString: Untagged
   m_Icon: {fileID: 0}
