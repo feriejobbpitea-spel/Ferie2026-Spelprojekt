@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader_Example
   Button: {fileID: 1310978356}
-  SceneToLoad: MainGame
+  SceneToLoad: Level Select
 --- !u!1 &1352873266
 GameObject:
   m_ObjectHideFlags: 0
