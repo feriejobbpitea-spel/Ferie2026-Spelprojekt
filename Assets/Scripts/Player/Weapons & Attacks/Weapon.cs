@@ -73,6 +73,8 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
+        UI.PressedButton();
+
         GetComponent<PlayerAnimations>().Animator.SetTrigger("Throw");
 
         GameObject SpawnTheBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

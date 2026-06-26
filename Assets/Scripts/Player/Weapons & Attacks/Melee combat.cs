@@ -71,11 +71,13 @@ public class Meleecombat : WeaponBase
     
     private void Attack() 
     {
-        if(VFX != null) 
+        if(VFX != null && isActive == false) 
         {
             isActive = true;
             StartCoroutine(EnableAndDisableVFX());
         }
+
+        UI.PressedButton();
 
         GetComponent<PlayerAnimations>().Animator.SetTrigger(AnimationString);
 
