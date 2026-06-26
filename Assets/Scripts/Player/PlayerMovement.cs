@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown($"Jump - Player {PlayerID}") && player.CanMove)
         {
             // Hoppa uppåt om spelaren nuddar marken
-            if (IsGrounded() || doubleJump)
+            if (IsGrounded() && !hasJumped || doubleJump)
             {
                 hasJumped = true;
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);

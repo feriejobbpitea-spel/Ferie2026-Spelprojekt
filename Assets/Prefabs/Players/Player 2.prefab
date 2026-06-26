@@ -13,9 +13,9 @@ PrefabInstance:
       value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 2651478061627270701, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 08201279cbf6c2243af9d7b8e4de0fab, type: 2}
     - target: {fileID: 2821278706121033750, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: jumpPower
       value: 4

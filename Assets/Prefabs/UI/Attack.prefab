@@ -249,6 +249,42 @@ MonoBehaviour:
   ConsoleKeyToPressImage: {fileID: 6690832396563044575}
   KeyToPressIcons:
     _serializedList:
+    - Key: F
+      Value:
+      - {fileID: -3301817013163156518, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -6110332536575788462, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 5885689761221766367, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -3653968342685649535, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: G
+      Value:
+      - {fileID: 4467383834652704971, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 6019793466819044550, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 4853939489971908789, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 126269445654738733, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: H
+      Value:
+      - {fileID: -2572974975633794321, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 8135136065093987434, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 5162585570274980972, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -8096567312839746000, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: J
+      Value:
+      - {fileID: -7948091556602628342, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 3368384200681876308, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -4752598416609804030, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -3450940938586488555, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: K
+      Value:
+      - {fileID: 610710011669031440, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 4859984109879299087, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -6224182827190400743, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 3456538963650456862, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: L
+      Value:
+      - {fileID: 6997829131210469538, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -6104224302766277114, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -4734669210414600284, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -5529601475436541703, guid: 4df102337cccedc46a708d132308f812, type: 3}
     - Key: JC
       Value:
       - {fileID: -7707917330291737424, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}

@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
-    private float cooldownTime = 3f;
+    private float cooldownTime = 4f;
     private float cooldownTimer = 0f;
     public PlayerHealth Rplayer;
     
