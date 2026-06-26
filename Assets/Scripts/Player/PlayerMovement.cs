@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask GroundLayerMask;
     [SerializeField] private float moveSpeed = 5.0F;
     [SerializeField] private float jumpPower = 4.0F;
+  
 
 
     [HideInInspector]
@@ -24,7 +26,9 @@ public class PlayerMovement : MonoBehaviour
     bool hasJumped;
     bool hasAlreadyReachedPeak;
 
-    Rigidbody2D rb;
+    private bool doubleJump;
+
+    public Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
 
 
@@ -43,12 +47,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+ 
         externalForces = Vector2.Lerp (externalForces, Vector2.zero, Time.deltaTime * 5);
         Flip();
         HandleMovement();
-        
-    }
 
+        if (IsGrounded())
+        {
+            doubleJump = true;
+        }
+
+    }
+  
     private void HandleMovement() 
     {
         // Kolla input för A och D knapparna
@@ -57,11 +67,15 @@ public class PlayerMovement : MonoBehaviour
         if (!player.CanMove)
             horizontalInput = 0;
 
-        // Här kollar vi om vi landat
         if(hasJumped && IsGrounded()) 
         {
-            hasAlreadyReachedPeak = false;
             hasJumped = false;
+        }
+
+        // Här kollar vi om vi landat
+        if (IsGrounded() && hasJumped && hasAlreadyReachedPeak) 
+        {
+            hasAlreadyReachedPeak = false;
             OnLanded?.Invoke();
         }
 
@@ -72,19 +86,26 @@ public class PlayerMovement : MonoBehaviour
             hasAlreadyReachedPeak = true;
             OnReachedPeak?.Invoke();
         }
-
+        
         // Kolla om spelaren trycker på hopp-knappen
         // kollar också om spelaren kan röra på sig
-        if (Input.GetButton($"Jump - Player {PlayerID}") && player.CanMove)
+        if (Input.GetButtonDown($"Jump - Player {PlayerID}") && player.CanMove)
         {
-            // Hoppa uppåt om spelaren nuddar marken och om spelarn inte har hoppat
-            if (IsGrounded() && !hasJumped)
+            // Hoppa uppåt om spelaren nuddar marken
+            if (IsGrounded() && !hasJumped || doubleJump)
             {
                 hasJumped = true;
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
                 OnJumped?.Invoke();
+                if (!IsGrounded())
+                {
+                    doubleJump = !doubleJump;
+
+                }
+                
             }
         }
+      
     }
 
     public void ApplyForce(Vector2 force) 

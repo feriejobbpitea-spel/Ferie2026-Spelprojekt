@@ -184,6 +184,7 @@ RectTransform:
   - {fileID: 2380975823743079303}
   - {fileID: 8126285010268059531}
   - {fileID: 2804056786450117541}
+  - {fileID: 7941416087703495096}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -243,7 +244,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI_AttackFeedback
   CooldownSlider: {fileID: 8651342642060519451}
   IconImage: {fileID: 7823433275038232291}
+  KeyToPressWrapper: {fileID: 6307779228361502705}
   KeyToPressText: {fileID: 4106249456169152255}
+  ConsoleKeyToPressImage: {fileID: 6690832396563044575}
+  KeyToPressIcons:
+    _serializedList:
+    - Key: F
+      Value:
+      - {fileID: -3301817013163156518, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -6110332536575788462, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 5885689761221766367, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -3653968342685649535, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: G
+      Value:
+      - {fileID: 4467383834652704971, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 6019793466819044550, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 4853939489971908789, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 126269445654738733, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: H
+      Value:
+      - {fileID: -2572974975633794321, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 8135136065093987434, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 5162585570274980972, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -8096567312839746000, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: J
+      Value:
+      - {fileID: -7948091556602628342, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 3368384200681876308, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -4752598416609804030, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -3450940938586488555, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: K
+      Value:
+      - {fileID: 610710011669031440, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 4859984109879299087, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -6224182827190400743, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: 3456538963650456862, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: L
+      Value:
+      - {fileID: 6997829131210469538, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -6104224302766277114, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -4734669210414600284, guid: 4df102337cccedc46a708d132308f812, type: 3}
+      - {fileID: -5529601475436541703, guid: 4df102337cccedc46a708d132308f812, type: 3}
+    - Key: JC
+      Value:
+      - {fileID: -7707917330291737424, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: -3167664012565464253, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: 7001558939514288092, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: -5646349190705867672, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+    - Key: KC
+      Value:
+      - {fileID: -9112927591779324202, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: -1962688518803993622, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: -2534983082481615764, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: 3692987858164446456, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+    - Key: LC
+      Value:
+      - {fileID: 649223268058989734, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: 8467241744927558709, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: -1257769187640015746, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+      - {fileID: 2527607607167286074, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
   Ammo: 0
   KeyToPress: 
   Cooldown: 0
@@ -579,6 +638,81 @@ MonoBehaviour:
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8088905692788192988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7941416087703495096}
+  - component: {fileID: 4978730634105290699}
+  - component: {fileID: 6690832396563044575}
+  m_Layer: 5
+  m_Name: KeyToPress-Console
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7941416087703495096
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088905692788192988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 238262880477017932}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 85}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 1}
+--- !u!222 &4978730634105290699
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088905692788192988}
+  m_CullTransparentMesh: 1
+--- !u!114 &6690832396563044575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8088905692788192988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 649223268058989734, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
-    private float cooldownTime = 3f;
+    private float cooldownTime = 4f;
     private float cooldownTimer = 0f;
     public PlayerHealth Rplayer;
     
@@ -42,6 +43,11 @@ public class Weapon : MonoBehaviour
             UI.CurrentIcon = UI_Icon;
 
             string keyToPress = PlayerID == 1 ? Player1Key : Player2Key;
+            // Om spelaren använder en handkontroller och är spelare 2
+            if (Gamepad.current != null && PlayerID == 2)
+            {
+                keyToPress += "C";
+            }
             UI.KeyToPress = keyToPress;
         }
 
@@ -67,6 +73,8 @@ public class Weapon : MonoBehaviour
 
     void Shoot()
     {
+        UI.PressedButton();
+
         GetComponent<PlayerAnimations>().Animator.SetTrigger("Throw");
 
         GameObject SpawnTheBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
