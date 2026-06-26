@@ -21,8 +21,12 @@ public class BeginRoundDialogue : Singleton<BeginRoundDialogue>
         if (!AudioToPlay.ContainsKey(playerWithCorrectID.Value))
             return 0;
 
+        if (AudioToPlay[playerWithCorrectID.Value].Count <= 0)
+            return 0;
+
         // Slumpa fram vilken audio vi vill spela från listan
         // Baseras på vilken karaktär de spelar som
+
         AudioWithSubtitles audioToPlay = AudioToPlay[playerWithCorrectID.Value].GetRandom();
 
         DialoguePlayer.Instance.NewDialogue(audioToPlay, playerWithCorrectID.Key.transform);
