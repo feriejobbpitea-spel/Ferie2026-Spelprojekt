@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 7b6adeefc2a840643bb6a06fe5876a79
+guid: 605fc578352090e43af344cd0eca37e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2643288877856473513
-    second: Sprite-ems throw_0
+      213: -2115512915812507193
+    second: Sprite-ems throw 1_0
   - first:
-      213: 9045158778043637960
-    second: Sprite-ems throw_1
+      213: -8174877948156204123
+    second: Sprite-ems throw 1_1
   - first:
-      213: 1112681748158182584
-    second: Sprite-ems throw_2
-  - first:
-      213: 8255128337020566326
-    second: Sprite-ems throw_3
+      213: 4041261477849882531
+    second: Sprite-ems throw 1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-ems throw_0
+      name: Sprite-ems throw 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75ebf9435c6215bd0800000000000000
-      internalID: -2643288877856473513
+      spriteID: 7c1ae37263034a2e0800000000000000
+      internalID: -2115512915812507193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-ems throw_1
+      name: Sprite-ems throw 1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -144,16 +141,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8c02c4e3cfbd68d70800000000000000
-      internalID: 9045158778043637960
+      spriteID: b9b9495ce2cc2d642ad79cba523c2523
+      internalID: 1159718582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-ems throw_2
+      name: Sprite-ems throw 1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,10 +163,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8b4770b972a017f00800000000000000
-      internalID: 1112681748158182584
+      spriteID: 545588b5d2cf7c347a4115e9e0790d8a
+      internalID: 2035373905
       vertices: []
       indices: 
       edges: []
@@ -178,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 64c98f9cb2ee8e9419cd9e1b0b43a289
+    spriteID: 19847ce3ed1d1b946b020f798fada2c0
     internalID: 0
     vertices: []
     indices: 
@@ -190,9 +187,9 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-ems throw_0: -2643288877856473513
-      Sprite-ems throw_1: 9045158778043637960
-      Sprite-ems throw_2: 1112681748158182584
+      Sprite-ems throw 1_0: -2115512915812507193
+      Sprite-ems throw 1_1: 1159718582
+      Sprite-ems throw 1_2: 2035373905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
