@@ -244,6 +244,9 @@ MonoBehaviour:
   CooldownSlider: {fileID: 8651342642060519451}
   IconImage: {fileID: 7823433275038232291}
   KeyToPressText: {fileID: 4106249456169152255}
+  KeyToPressImage: {fileID: 6852002789271931047}
+  KeyToPressIcons:
+    _serializedList: []
   Ammo: 0
   KeyToPress: 
   Cooldown: 0

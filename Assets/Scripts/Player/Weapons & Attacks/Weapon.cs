@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
@@ -42,6 +43,11 @@ public class Weapon : MonoBehaviour
             UI.CurrentIcon = UI_Icon;
 
             string keyToPress = PlayerID == 1 ? Player1Key : Player2Key;
+            // Om spelaren använder en handkontroller och är spelare 2
+            if (Gamepad.current != null && PlayerID == 2)
+            {
+                keyToPress += "C";
+            }
             UI.KeyToPress = keyToPress;
         }
 

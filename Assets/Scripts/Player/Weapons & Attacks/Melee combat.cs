@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Player))]
 public class Meleecombat : WeaponBase
@@ -33,6 +34,7 @@ public class Meleecombat : WeaponBase
     // --- VFX ---
     public GameObject VFX;
     public float disableVFXAfterTime = 3;
+    private bool isActive;
 
 
     private void Update()
@@ -43,8 +45,13 @@ public class Meleecombat : WeaponBase
             UI.Cooldown = cooldownTimer;
             UI.MaxCooldown = cooldownTime;
             UI.CurrentIcon = UI_Icon;
-
+            
             string keyToPress = PlayerID == 1 ? Player1Key : Player2Key;
+            // Om spelaren använder en handkontroller och är spelare 2
+            if(Gamepad.current != null && PlayerID == 2) 
+            {
+                keyToPress += "C";
+            }
             UI.KeyToPress = keyToPress;
         }
         
@@ -66,6 +73,7 @@ public class Meleecombat : WeaponBase
     {
         if(VFX != null) 
         {
+            isActive = true;
             StartCoroutine(EnableAndDisableVFX());
         }
 
@@ -89,9 +97,10 @@ public class Meleecombat : WeaponBase
         VFX.SetActive(true);
         yield return new WaitForSeconds(disableVFXAfterTime);
         VFX.SetActive(false);
+        isActive = false;
     }
 
-    
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);
