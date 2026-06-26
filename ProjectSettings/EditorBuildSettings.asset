@@ -19,9 +19,15 @@ EditorBuildSettings:
     guid: 5c977178cf06e044391f431ece7e6b57
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
-    guid: ea87f95367261474686eaf60883a3f65
+    guid: 37100af115027664b95d82e466ecde1a
   - enabled: 1
     path: Assets/Scenes/Character Select.unity
     guid: d5f25eecd15a30845b5441c40b37915a
+  - enabled: 1
+    path: Assets/Scenes/Level Select.unity
+    guid: 651bbd071cc308143a4714daff22fa0e
+  - enabled: 1
+    path: Assets/Scenes/Map 2.unity
+    guid: 463c1c7681a8eb84685b6dfe4ef5c5cf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
