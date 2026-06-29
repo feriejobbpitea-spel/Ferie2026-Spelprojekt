@@ -10,8 +10,8 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] private bool SkipIntroCutscene;
 
     // Call-a från "character select skärmen" för att välja en prefab för varje spelare, så att vi kan spawna rätt karaktär när spelet startar
-    public static int player1ID = 3;
-    public static int player2ID = 1;
+    public static int player1ID = 0;
+    public static int player2ID = 3;
 
     // Key = Styrande spelaren
     // Value = Prefab för spelaren
