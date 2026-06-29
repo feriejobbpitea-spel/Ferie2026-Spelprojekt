@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3101967683723123351}
   - component: {fileID: 540684386247504582}
   m_Layer: 0
-  m_Name: Kubbpinne (Bullet)
+  m_Name: _Kubbpinne_Lobb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

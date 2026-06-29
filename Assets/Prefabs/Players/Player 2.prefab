@@ -24,13 +24,41 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2927578640102295329, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3395570665020629262, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
+      objectReference: {fileID: -6404804011105513301, guid: 233f44a50749498408b01f97470c6f16, type: 3}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: UI_Icon
+      value: 
+      objectReference: {fileID: 3853722143528337593, guid: 60411a2182bd90f40a08c0665fe64cce, type: 3}
     - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: attackDamage
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: extraKnockback
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5371871456530348200, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 5572945960350513126, guid: fa2f5694ac50f604497155a34e401793, type: 3}
+    - target: {fileID: 5774634334001419643, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7159717833775409627, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_Name
@@ -76,6 +104,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7996963354648223215, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3e72dc186df0d1840af1e1ff6db044bd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

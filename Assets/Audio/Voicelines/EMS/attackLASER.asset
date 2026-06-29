@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
   AudioClip: {fileID: 8300000, guid: aa3291ff4c603f742a6b69f3849499d2, type: 3}
   Text: Take my laser gun- oop it doesnt work take my kubb instead.
+  Speaker: 1

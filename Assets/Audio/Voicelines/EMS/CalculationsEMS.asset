@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
   AudioClip: {fileID: 8300000, guid: 987f847846c2d6a44ae0838d58925169, type: 3}
   Text: According to my calculations, your death is imminent.
+  Speaker: 1

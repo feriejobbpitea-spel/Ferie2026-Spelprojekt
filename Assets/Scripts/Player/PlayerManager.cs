@@ -10,7 +10,7 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] private bool SkipIntroCutscene;
 
     // Call-a från "character select skärmen" för att välja en prefab för varje spelare, så att vi kan spawna rätt karaktär när spelet startar
-    public static int player1ID = 0;
+    public static int player1ID = 1;
     public static int player2ID = 3;
 
     // Key = Styrande spelaren
@@ -57,10 +57,20 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void OnPlayerDeath(GameObject Player)
     {
+        StartCoroutine(PlayFinisher(Player));
+    }
+
+    private IEnumerator PlayFinisher(GameObject Player) 
+    {
+        Time.timeScale = 0.2F;
         Player.SetActive(false);
+        yield return new WaitForSecondsRealtime(2);
+        Time.timeScale = 1;
+
+        yield return new WaitForSeconds(3);
         StartCoroutine(NewRoundManager());
     }
-   
+
     private IEnumerator NewRoundManager() 
     {
         PrepareNextRound();

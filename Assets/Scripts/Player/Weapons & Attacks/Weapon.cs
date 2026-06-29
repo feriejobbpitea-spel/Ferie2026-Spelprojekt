@@ -51,22 +51,25 @@ public class Weapon : MonoBehaviour
             UI.KeyToPress = keyToPress;
         }
 
-        if (cooldownTimer <= 0)
-       {
-
-
-            if (Input.GetButtonDown($"Fire - Player {PlayerID}"))
+        if (player.CanMove)
+        {
+            if (cooldownTimer <= 0)
             {
-                Shoot();
-                cooldownTimer = cooldownTime;
-            }
 
-           
-       }
-       else
-       {
-          cooldownTimer -= Time.deltaTime;
-       }
+
+                if (Input.GetButtonDown($"Fire - Player {PlayerID}"))
+                {
+                    Shoot();
+                    cooldownTimer = cooldownTime;
+                }
+
+
+            }
+            else
+            {
+                cooldownTimer -= Time.deltaTime;
+            }
+        }
     }
 
 
@@ -78,6 +81,9 @@ public class Weapon : MonoBehaviour
         GetComponent<PlayerAnimations>().Animator.SetTrigger("Throw");
 
         GameObject SpawnTheBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        SpawnTheBullet.GetComponent<Bullet>().Attacker = Rplayer;
+
+        Bullet newBullet = SpawnTheBullet.GetComponent<Bullet>();
+        newBullet.Attacker = Rplayer;
+        newBullet.MaxSurvivalTime = cooldownTime;
     }
 }

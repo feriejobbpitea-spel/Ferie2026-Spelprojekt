@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
   AudioClip: {fileID: 8300000, guid: cc85e0f9f5dd2b642b822846cc9901c3, type: 3}
   Text: you would be awesome for my next experiment.
+  Speaker: 1

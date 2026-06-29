@@ -36,6 +36,6 @@ public class PlayerKnockback : MonoBehaviour
         else
             direction = -1;
 
-        playerMovement.ApplyForce(new Vector2(direction, 0) * payload.DamageTaken / 4);
+        playerMovement.ApplyForce(new Vector2(direction, 0) * ((payload.DamageTaken / 4) + payload.ExtraKnockback));
     }
 }

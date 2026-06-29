@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
   AudioClip: {fileID: 8300000, guid: 9e10d8ee7d1c9084e9d3ac98a67a6c82, type: 3}
   Text: i will take you to my laboratory soon enough.
+  Speaker: 1
