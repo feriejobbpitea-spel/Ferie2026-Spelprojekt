@@ -806,10 +806,10 @@ MonoBehaviour:
   PlayerID: 1
   sr: {fileID: 705293674}
   skins:
-  - {fileID: 21300000, guid: 96136fdcd7f30434283c59edeac094b8, type: 3}
-  - {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
+  - {fileID: -6226492245494716243, guid: 22bcab8dda034a14e96c040da77ffceb, type: 3}
+  - {fileID: -2355075031841944872, guid: 0dddca2346828ba41a29fac8ce028f98, type: 3}
   - {fileID: 869046328017328930, guid: a00c46c90bf47dd4794aa09fd0438f1b, type: 3}
-  - {fileID: -6177794686225540139, guid: 6f1ddb9c48417be4eb2420a8ca7d95c5, type: 3}
+  - {fileID: -2623460619841072680, guid: 3f04145b7b8daba428fd9bb07ed483a1, type: 3}
 --- !u!4 &1031175017
 Transform:
   m_ObjectHideFlags: 0
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader_Example
   Button: {fileID: 1310978356}
-  SceneToLoad: MainGame
+  SceneToLoad: Level Select
 --- !u!1 &1352873266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,10 +1782,10 @@ MonoBehaviour:
   PlayerID: 2
   sr: {fileID: 1607282445}
   skins:
-  - {fileID: 21300000, guid: 96136fdcd7f30434283c59edeac094b8, type: 3}
-  - {fileID: 21300000, guid: cc35e7cf84fd4c64d950e84f7025d853, type: 3}
+  - {fileID: -6226492245494716243, guid: 22bcab8dda034a14e96c040da77ffceb, type: 3}
+  - {fileID: -2355075031841944872, guid: 0dddca2346828ba41a29fac8ce028f98, type: 3}
   - {fileID: 869046328017328930, guid: a00c46c90bf47dd4794aa09fd0438f1b, type: 3}
-  - {fileID: -6177794686225540139, guid: 6f1ddb9c48417be4eb2420a8ca7d95c5, type: 3}
+  - {fileID: -2623460619841072680, guid: 3f04145b7b8daba428fd9bb07ed483a1, type: 3}
 --- !u!4 &1739366989
 Transform:
   m_ObjectHideFlags: 0

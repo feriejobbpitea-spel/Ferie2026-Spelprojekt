@@ -37,10 +37,12 @@ public class ScoreBoard : MonoBehaviour
     }
     IEnumerator ExampleCoroutine()
     {
+        Time.timeScale = 0;
         WinScreen.SetActive(true);
         
         yield return new WaitForSeconds(wait);
-         SceneLoader.LoadScene("MainMenu");
+        Time.timeScale = 1;
+        SceneLoader.LoadScene("MainMenu");
     }
     public void Update()
     {

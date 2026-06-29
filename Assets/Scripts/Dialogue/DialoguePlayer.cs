@@ -47,8 +47,6 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
         AudioWithSubtitles Audio = Dialogue.Key;
         Transform Target = Dialogue.Value;
 
-        Debug.Log($"Target: {Target}");
-
         _isPlayingAudio = true;
 
         OnStartedPlayingAudio?.Invoke(Audio, Target);

@@ -7,10 +7,11 @@ using UnityEngine;
 public class PlayerManager : Singleton<PlayerManager>
 {
     [SerializeField] private List<Player> PlayerPrefabs = new();
+    [SerializeField] private bool SkipIntroCutscene;
 
     // Call-a från "character select skärmen" för att välja en prefab för varje spelare, så att vi kan spawna rätt karaktär när spelet startar
-    public static int player1ID = 3;
-    public static int player2ID = 1;
+    public static int player1ID = 0;
+    public static int player2ID = 3;
 
     // Key = Styrande spelaren
     // Value = Prefab för spelaren
@@ -69,13 +70,20 @@ public class PlayerManager : Singleton<PlayerManager>
             Debug.LogError($"Lägg till scriptet '{nameof(BeginRoundDialogue)}' i scenen.");
         }
 
-        // Spela ljud för båda spelarna
-        foreach (var player in SpawnedPlayers)
+        if (SkipIntroCutscene)
         {
-            if (player.Key == null)
-                continue;
-            float timeToWait = BeginRoundDialogue.Instance.PlayAudio(player.Key.PlayerID);
-            yield return new WaitForSeconds(timeToWait);
+            Debug.Log($"Skippar intro voicelines! Ändra detta på {nameof(PlayerManager)}'s gameObject.");
+        }
+        else 
+        { 
+            // Spela ljud för båda spelarna
+            foreach (var player in SpawnedPlayers)
+            {
+                if (player.Key == null)
+                    continue;
+                float timeToWait = BeginRoundDialogue.Instance.PlayAudio(player.Key.PlayerID);
+                yield return new WaitForSeconds(timeToWait);
+            }
         }
 
         yield return new WaitForSeconds(1);
