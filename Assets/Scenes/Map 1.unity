@@ -11424,6 +11424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1 - Player Icon
       objectReference: {fileID: 0}
+    - target: {fileID: 3262949126838967346, guid: 215d1819a420c7a46a595e9a9df663fa, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4473218858397524052, guid: 215d1819a420c7a46a595e9a9df663fa, type: 3}
       propertyPath: ID
       value: 1
