@@ -669,7 +669,7 @@ MonoBehaviour:
   CooldownTime: 5
   Player1Key: E
   Player2Key: P
-  UI_Icon: {fileID: 0}
+  UI_Icon: {fileID: 21300000, guid: 059b17dd9e655ad408b943924cc528e4, type: 3}
 --- !u!1 &7849369242863148089
 GameObject:
   m_ObjectHideFlags: 0
