@@ -58,8 +58,6 @@ using UnityEngine.InputSystem;
         bool holdingButton = Input.GetButton($"{InputString} {PlayerID}");
         bool holdingBumper = Input.GetAxis($"{InputString} {PlayerID}") != 0;
 
-        Debug.Log(Input.GetAxis($"{InputString} {PlayerID}"));
-
         if ((holdingButton || holdingBumper) && currentCooldownTime <= 0)
         {
             if (isBlocking == false)
