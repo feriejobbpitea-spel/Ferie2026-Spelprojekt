@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 663635e28fd38f44ab2e2e92b00edf99
+guid: a953746e10e4c5b43b1118c150a45fe0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5733509246446667393
-    second: AttackUI_0
+      213: -4856695356041511085
+    second: Screenshot 2026-06-29 153752_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AttackUI_0
+      name: Screenshot 2026-06-29 153752_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 117
-        height: 48
+        x: 0
+        y: 0
+        width: 1618
+        height: 835
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1860fde3844819f40800000000000000
-      internalID: 5733509246446667393
+      spriteID: 35f3bd83e4d899cb0800000000000000
+      internalID: -4856695356041511085
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AttackUI_0: 5733509246446667393
+      Screenshot 2026-06-29 153752_0: -4856695356041511085
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

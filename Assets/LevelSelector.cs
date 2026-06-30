@@ -15,5 +15,10 @@ public class LevelSelector : MonoBehaviour
         SceneLoader.LoadScene("Map 2");
     }
 
+    public void Map3() 
+    {
+        SceneLoader.LoadScene("Map 3");
+    }
+
 
 }

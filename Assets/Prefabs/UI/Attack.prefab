@@ -303,6 +303,18 @@ MonoBehaviour:
       - {fileID: 8467241744927558709, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
       - {fileID: -1257769187640015746, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
       - {fileID: 2527607607167286074, guid: 02c244520c6c9114d960db0d03a570a5, type: 3}
+    - Key: PC
+      Value:
+      - {fileID: -818293671, guid: 93370ef97a04c3b4cb8203cc4f740eb4, type: 3}
+      - {fileID: -344388354, guid: 93370ef97a04c3b4cb8203cc4f740eb4, type: 3}
+      - {fileID: -1680062480, guid: 93370ef97a04c3b4cb8203cc4f740eb4, type: 3}
+      - {fileID: 849486078, guid: 93370ef97a04c3b4cb8203cc4f740eb4, type: 3}
+    - Key: E
+      Value:
+      - {fileID: 7775608379905903571, guid: 1a1a099d3ff80fe42a2c7fd9626565b3, type: 3}
+      - {fileID: -1691945535911410233, guid: 1a1a099d3ff80fe42a2c7fd9626565b3, type: 3}
+      - {fileID: 1809074495748985921, guid: 1a1a099d3ff80fe42a2c7fd9626565b3, type: 3}
+      - {fileID: 8542897734596972656, guid: 1a1a099d3ff80fe42a2c7fd9626565b3, type: 3}
   Ammo: 0
   KeyToPress: 
   Cooldown: 0
