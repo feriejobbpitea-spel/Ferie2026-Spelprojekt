@@ -1,17 +1,25 @@
-using UnityEngine;
-using UnityEditor;
 using NUnit.Framework;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SkinManager : MonoBehaviour
 {
-    public int PlayerID;    
-    public Image sr;
-    public List<Sprite> skins = new List<Sprite>();
-    private int selectedSkin = 0;
+    [SerializeField] TextMeshProUGUI Health;
+    [SerializeField] TextMeshProUGUI Kick;
+    [SerializeField] TextMeshProUGUI Slash;
+    [SerializeField] TextMeshProUGUI ooooo;
+  
 
+    public int PlayerID;   
+    public Image sr;
+    public List<Player> skins = new List<Player>();
+    private int selectedSkin = 0;
+    
     private void Awake()
     {
         NextOption();
@@ -24,8 +32,24 @@ public class SkinManager : MonoBehaviour
         {
             selectedSkin = 0;
         }
+        
+        
+        int maxHealth = skins[selectedSkin].GetComponent<PlayerHealth>().maxHealth;
+        Health.text = maxHealth.ToString();
 
-        sr.sprite = skins[selectedSkin];
+        skins[selectedSkin].GetComponents<Meleecombat>();
+
+
+        Meleecombat[] Melee = skins[selectedSkin].GetComponents<Meleecombat>();
+
+        Kick.text = Melee[0].attackDamage.ToString();
+        Slash.text = Melee[1].attackDamage.ToString();
+
+        string namn = skins[selectedSkin].GetComponent<Player>().Name;
+        ooooo.text = namn.ToString();
+
+
+        sr.sprite = skins[selectedSkin].GetComponent<SpriteRenderer>().sprite;
 
         if (PlayerID == 1)
         {
@@ -47,7 +71,18 @@ public class SkinManager : MonoBehaviour
             selectedSkin = skins.Count -1;
         }
 
-        sr.sprite = skins[selectedSkin];
+        int maxHealth = skins[selectedSkin].GetComponent<PlayerHealth>().maxHealth;
+        Health.text = maxHealth.ToString();
+
+        Meleecombat[] Melee = skins[selectedSkin].GetComponents<Meleecombat>();
+        Kick.text = Melee[0].attackDamage.ToString();
+        Slash.text = Melee[1].attackDamage.ToString();
+
+        string namn = skins[selectedSkin].GetComponent<Player>().Name;
+        ooooo.text = namn.ToString();
+
+        sr.sprite = skins[selectedSkin].GetComponent<SpriteRenderer>().sprite;
+        ;
 
         if (PlayerID == 1)
         {

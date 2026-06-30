@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public string Name;
     public static Action<Player> OnCreated;
 
     public int PlayerID = 1;

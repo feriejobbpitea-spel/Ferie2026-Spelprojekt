@@ -2,17 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
     [SerializeField] private List<Player> PlayerPrefabs = new();
     [SerializeField] private bool SkipIntroCutscene;
-
+    
     // Call-a från "character select skärmen" för att välja en prefab för varje spelare, så att vi kan spawna rätt karaktär när spelet startar
     public static int player1ID = 3;
     public static int player2ID = 1;
-
+    public int countdownTime;
+    public TextMeshProUGUI countdownDisplay;
+    [SerializeField] private AudioClip damageSoundClip;
     // Key = Styrande spelaren
     // Value = Prefab för spelaren
     public Dictionary<Player, Player> SpawnedPlayers = new();
@@ -87,6 +90,28 @@ public class PlayerManager : Singleton<PlayerManager>
         }
 
         yield return new WaitForSeconds(1);
+        
+        
+            while (countdownTime > 0)
+            {
+                countdownDisplay.text = countdownTime.ToString();
+
+                yield return new WaitForSeconds(1f);
+
+                countdownTime--;
+
+            SoundFXManager.instance.PlaySoundFXClip(damageSoundClip, transform, 1f);
+
+            }
+
+            countdownDisplay.text = "FIGHT";
+
+
+            yield return new WaitForSeconds(1f);
+
+            countdownDisplay.gameObject.SetActive(false);
+
+        
         StartRound();
     }
 

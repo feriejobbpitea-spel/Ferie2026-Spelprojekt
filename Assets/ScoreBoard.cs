@@ -32,8 +32,8 @@ public class ScoreBoard : MonoBehaviour
 
     public void UpdateKillCounterUI()
     {
-        KillCounter_TMP1.text = KillCount1.ToString();
-        KillCounter_TMP2.text = KillCount2.ToString();
+        KillCounter_TMP1.text = ($"{KillCount1} / {"5"}".ToString());
+        KillCounter_TMP2.text = ($"{KillCount2} / {"5"}".ToString());
     }
     IEnumerator ExampleCoroutine()
     {
@@ -46,7 +46,7 @@ public class ScoreBoard : MonoBehaviour
     {
          if (KillCount1 >= 5)
     {
-            WinText.SetText("Player 1 Winner");
+            WinText.SetText("Player 2 Winner");
 
            StartCoroutine(ExampleCoroutine());
 
@@ -55,7 +55,7 @@ public class ScoreBoard : MonoBehaviour
     }
         if (KillCount2 >= 5)
         {
-            WinText.SetText("Player 2 Winner");
+            WinText.SetText("Player 1 Winner");
             StartCoroutine(ExampleCoroutine());
         }
     }

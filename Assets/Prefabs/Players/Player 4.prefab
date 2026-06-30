@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: damageSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: aa3291ff4c603f742a6b69f3849499d2, type: 3}
+    - target: {fileID: 1381896936048955567, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: Name
+      value: Kira
+      objectReference: {fileID: 0}
     - target: {fileID: 2651478061627270701, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_Enabled
       value: 1

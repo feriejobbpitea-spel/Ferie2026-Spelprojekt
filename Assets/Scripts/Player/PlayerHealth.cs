@@ -2,15 +2,24 @@ using System;
 using Unity.Cinemachine;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public int maxHealth = 10;
+   
  
     public int PlayerID => GetComponent<Player>().PlayerID;
 
+
+   
+
+
+    [SerializeField] private AudioClip[] damageSoundClip;
+    
     public HealthBar healthBar;
     public PlayerBlock playerblock;
 
@@ -22,6 +31,8 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         ResetPlayerHealth();
+       
+       
     }
 
     public void ResetPlayerHealth() 
@@ -41,9 +52,12 @@ public class PlayerHealth : MonoBehaviour
             health -= amount;
         }
 
-       
-
+         
+        SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClip, transform, 1f);
         
+           
+
+
         // Skicka till eventet att spelaren har tagit skada, så att andra scripts kan reagera på det
         OnPlayerHurt?.Invoke(new PlayerHurtPayload
         {
