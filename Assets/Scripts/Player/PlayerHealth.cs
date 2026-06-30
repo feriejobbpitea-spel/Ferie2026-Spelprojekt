@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (playerblock?.isBlocking == true)
         {
-            health -= amount / 2;
+            health -= amount / 4;
         }
         else
         {

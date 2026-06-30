@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
  public class PlayerBlock : WeaponBase
 {
+    public GameObject blockVFXPrefab;
     public GameObject block;
     private int PlayerID => Player.PlayerID;
     public bool isBlocking = false;
@@ -47,7 +48,8 @@ using UnityEngine.InputSystem;
 
         currentCooldownTime = CooldownTime;
 
-        Debug.Log("Spelaren blockerade skada!");
+        var newBlockVFX = GameObject.Instantiate(blockVFXPrefab, transform.position, Quaternion.identity);
+        GameObject.Destroy(newBlockVFX, 1);
     }
 
     void Update()

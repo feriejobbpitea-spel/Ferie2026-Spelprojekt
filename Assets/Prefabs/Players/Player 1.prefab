@@ -662,6 +662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerBlock
   attackFeedback: {fileID: 0}
+  blockVFXPrefab: {fileID: 5735001452796413711, guid: 7e3628ffab725c6498e15282f0fd7a37, type: 3}
   block: {fileID: 7849369242863148089}
   isBlocking: 0
   InputString: Block - Player
