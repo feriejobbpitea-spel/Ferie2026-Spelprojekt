@@ -38,15 +38,15 @@ PrefabInstance:
       objectReference: {fileID: 3853722143528337593, guid: 60411a2182bd90f40a08c0665fe64cce, type: 3}
     - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: attackDamage
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: cooldownTime
-      value: 4
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: extraKnockback
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,6 +55,14 @@ PrefabInstance:
     - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: attackDamage
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: extraKnockback
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5371871456530348200, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: bulletPrefab

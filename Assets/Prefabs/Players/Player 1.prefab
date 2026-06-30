@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: 0
-  maxHealth: 650
+  maxHealth: 670
   healthBar: {fileID: 0}
   playerblock: {fileID: 0}
 --- !u!114 &5371871456530348200
@@ -560,6 +560,7 @@ MonoBehaviour:
   Rplayer: {fileID: -2738824491799416245}
   firePoint: {fileID: 416973336598152857}
   bulletPrefab: {fileID: 5572945960350513126, guid: 99351b86fb3ec4549aaba9cd2c7693ef, type: 3}
+  cooldownTime: 4
   Player1Key: H
   Player2Key: L
   UI_Icon: {fileID: 21300000, guid: c61b0e94c37bd124095786717f3e39bc, type: 3}
@@ -638,7 +639,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   ourPlayerHealth: {fileID: -2738824491799416245}
-  attackDamage: 70
+  attackDamage: 60
   extraKnockback: 0
   cooldownTime: 3
   AnimationString: Slash

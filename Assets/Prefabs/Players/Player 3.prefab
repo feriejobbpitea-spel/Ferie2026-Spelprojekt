@@ -40,6 +40,10 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: attackDamage
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 5371871456530348200, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: bulletPrefab
       value: 
