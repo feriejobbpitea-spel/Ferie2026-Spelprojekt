@@ -137,10 +137,14 @@ MonoBehaviour:
   damage: 90
   speed: 7
   upwardSpeed: 3
+  sineWaveSpeed: 0
+  sineWaveHeight: 0
+  UseBoomerang: 0
   collisionSize: 0.15
   collisionOffset: {x: 0, y: 0, z: 0}
   rb: {fileID: 3756036786130814633}
   Attacker: {fileID: 0}
+  MaxSurvivalTime: 0
 --- !u!95 &3101967683723123351
 Animator:
   serializedVersion: 7

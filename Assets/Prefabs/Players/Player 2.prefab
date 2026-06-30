@@ -41,6 +41,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: cooldownTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: extraKnockback
       value: 15
       objectReference: {fileID: 0}

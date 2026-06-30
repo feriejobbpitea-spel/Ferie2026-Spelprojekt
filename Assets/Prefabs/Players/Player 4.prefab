@@ -46,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: cooldownTime
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_LocalScale.x
