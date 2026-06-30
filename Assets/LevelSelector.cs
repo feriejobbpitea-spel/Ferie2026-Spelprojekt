@@ -7,12 +7,12 @@ public class LevelSelector : MonoBehaviour
 
     public void Map1()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneLoader.LoadScene("Map 1");
     }
 
     public void Map2()
     {
-        SceneManager.LoadScene("Map 2");
+        SceneLoader.LoadScene("Map 2");
     }
 
 

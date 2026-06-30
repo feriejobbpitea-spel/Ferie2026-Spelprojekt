@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
   AudioClip: {fileID: 8300000, guid: 9904eaa80e2ca9f4faa9a68294939cf4, type: 3}
   Text: time for a painful experiment.
+  Speaker: 1

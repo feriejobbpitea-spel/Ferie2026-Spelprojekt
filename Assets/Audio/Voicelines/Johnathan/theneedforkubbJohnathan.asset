@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ed8212562033c40b9341e7f1174c5d, type: 3}
   m_Name: theneedforkubbJohnathan
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
-  AudioClip: {fileID: 8300000, guid: d0089393e07d9544aa1788b026ca0a8c, type: 3}
+  AudioClip: {fileID: 8300000, guid: ce7aadcb1e260654ca7ead9e25bd481a, type: 3}
   Text: I feel the need - the need for kubb.
+  Speaker: 2

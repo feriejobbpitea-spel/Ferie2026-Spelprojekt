@@ -12,6 +12,7 @@ public class Meleecombat : WeaponBase
     public LayerMask enemyMask;
     public PlayerHealth ourPlayerHealth;
     public int attackDamage = 2;
+    public float extraKnockback = 0;
 
     public float cooldownTime = 5f;
     private float cooldownTimer = 0f;
@@ -36,6 +37,11 @@ public class Meleecombat : WeaponBase
     public float disableVFXAfterTime = 3;
     private bool isActive;
 
+    private void OnDisable()
+    {
+        isActive = false;
+        VFX?.SetActive(false);
+    }
 
     private void Update()
     {
@@ -54,18 +60,22 @@ public class Meleecombat : WeaponBase
             }
             UI.KeyToPress = keyToPress;
         }
-        
-        if (cooldownTimer <= 0) 
+
+
+        if (Player.CanMove)
         {
-            if (Input.GetButtonDown($"{InputString} {PlayerID}"))
+            if (cooldownTimer <= 0)
             {
-                Attack();
-                cooldownTimer = cooldownTime;
+                if (Input.GetButtonDown($"{InputString} {PlayerID}"))
+                {
+                    Attack();
+                    cooldownTimer = cooldownTime;
+                }
             }
-        }
-        else
-        {
-            cooldownTimer -= Time.deltaTime;
+            else
+            {
+                cooldownTimer -= Time.deltaTime;
+            }
         }
     }
     
@@ -89,7 +99,7 @@ public class Meleecombat : WeaponBase
             if (enemyplayerHealth == ourPlayerHealth)
                 continue;
 
-            enemyplayerHealth.TakeDamage(attackDamage, this.transform);
+            enemyplayerHealth.TakeDamage(attackDamage, this.transform, extraKnockback);
 
         }
     }

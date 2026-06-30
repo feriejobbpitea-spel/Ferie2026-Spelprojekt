@@ -2,11 +2,12 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
     public int PlayerID = 1;
-
+    [SerializeField] private TextMeshProUGUI HealthUI;
     public Slider healthSlider;
     public Slider animatedSlider;
 
@@ -34,14 +35,17 @@ public class HealthBar : MonoBehaviour
         animatedSlider.DOValue(health, 0.3f).SetDelay(.2F);
         
         healthSlider.value = health;
+        
     }
 
     private void OnPlayerHealthChanged(PlayerHealth health)
     {
-        if (health.GetComponent<Player>().PlayerID != PlayerID)
+        
+        if (health.PlayerID != PlayerID)
             return;
 
         SetMaxHealth(health.maxHealth);
         SetHealth(health.health);
+        HealthUI.SetText($"{health.health} / {health.maxHealth}");
     }
 }

@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 34949d5cc363c774697028f60bd2b91d
+guid: 196e0a2547d817b4d9668b3373c6c504
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8236998522976894094
-    second: Sprite-sparkle throw2_0
+      213: -181996996081445193
+    second: Player1And2_0
   - first:
-      213: -4741429648715496494
-    second: Sprite-sparkle throw2_1
+      213: -7322742274293401135
+    second: Player1And2_1
   - first:
-      213: -7525313225545312942
-    second: Sprite-sparkle throw2_2
+      213: 4622950853351048906
+    second: Player1And2_2
   - first:
-      213: 68811580089144803
-    second: Sprite-sparkle throw2_3
+      213: -5347779764818067726
+    second: Player1And2_3
   - first:
-      213: 2869056224103854802
-    second: Sprite-sparkle throw2_4
+      213: 9022349064209623619
+    second: Player1And2_4
   - first:
-      213: 8151664252723549211
-    second: Sprite-sparkle throw2_5
+      213: 5903838331120113495
+    second: Player1And2_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-sparkle throw2_0
+      name: Player1And2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8c7471e382bf4270800000000000000
-      internalID: 8236998522976894094
+      spriteID: 7b6906242ba697df0800000000000000
+      internalID: -181996996081445193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-sparkle throw2_1
+      name: Player1And2_1
       rect:
         serializedVersion: 2
         x: 64
@@ -165,96 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d3cecc0bde033eb0800000000000000
-      internalID: -4741429648715496494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-sparkle throw2_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25592dffd77b09790800000000000000
-      internalID: -7525313225545312942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-sparkle throw2_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e595ab74c774f000800000000000000
-      internalID: 68811580089144803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-sparkle throw2_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d275565f6fe0d720800000000000000
-      internalID: 2869056224103854802
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite-sparkle throw2_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1456dfc277802170800000000000000
-      internalID: 8151664252723549211
+      spriteID: 1d97107f2b4606a90800000000000000
+      internalID: -7322742274293401135
       vertices: []
       indices: 
       edges: []
@@ -263,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1d4e8f3416f76eb49ad92df2290cc969
+    spriteID: 7a5bf318056fc804880b3746133e9cbc
     internalID: 0
     vertices: []
     indices: 
@@ -275,12 +187,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-sparkle throw2_0: 8236998522976894094
-      Sprite-sparkle throw2_1: -4741429648715496494
-      Sprite-sparkle throw2_2: -7525313225545312942
-      Sprite-sparkle throw2_3: 68811580089144803
-      Sprite-sparkle throw2_4: 2869056224103854802
-      Sprite-sparkle throw2_5: 8151664252723549211
+      Player1And2_0: -181996996081445193
+      Player1And2_1: -7322742274293401135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

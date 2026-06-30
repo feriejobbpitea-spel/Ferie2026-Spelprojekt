@@ -1,16 +1,21 @@
+using AYellowpaper.SerializedCollections;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialoguePlayer : Singleton<DialoguePlayer>
 {
     [SerializeField] private AudioSource AudioSource;
     [SerializeField] private GameObject DialogueBox;
     [SerializeField] private TMP_Text DialogueText;
+    [SerializeField] private Image DialogueProfile;
     [SerializeField] private CinemachineCamera CinemachineCamera;
+    [SerializeField] private float TypewriterSpeed = 0.1F;
+    [SerializeField] private SerializedDictionary<Speaker, Sprite> SpeakerProfiles = new();
 
     private bool _isPlayingAudio;
 
@@ -54,18 +59,29 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
         CinemachineCamera.gameObject.SetActive(true);
         CinemachineCamera.Target.TrackingTarget = Target;
 
+        DialogueProfile.sprite = SpeakerProfiles[Audio.Speaker];
 
         DialogueBox.SetActive(true);
 
-        // Display text
-        DialogueText.text = Audio.Text;
         
         // Spela ljudet
         AudioSource.PlayOneShot(Audio.AudioClip);
         
+        // Display text
+        DialogueText.text = string.Empty;
+
+        float occupiedTime = 0.0F;
+
+        string finalText = Audio.Text;
+        foreach (char c in finalText)
+        {
+            DialogueText.text += c;
+            occupiedTime += TypewriterSpeed;
+            yield return new WaitForSeconds(TypewriterSpeed);
+        }
 
         // Vänta på att ljudet spelat klart
-        yield return new WaitForSeconds(Audio.AudioClip.length);
+        yield return new WaitForSeconds(Audio.AudioClip.length - occupiedTime);
 
 
         DialogueBox.SetActive(false);

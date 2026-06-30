@@ -1,4 +1,6 @@
 using System;
+using Unity.Cinemachine;
+using Unity.IO.LowLevel.Unsafe;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -6,15 +8,18 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public int maxHealth = 10;
-
-    public int PlayerID => GetComponent<Player>().PlayerID;
+ 
+    public int PlayerID => GetComponent<Player>()?.PlayerID ?? -1;
 
     public HealthBar healthBar;
+    public PlayerBlock playerblock;
 
+    public static event Action OnKubbkingDied;
     public static event Action<PlayerHealth> OnPlayerDied;
     public static event Action<PlayerHurtPayload> OnPlayerHurt;
     public static event Action<PlayerHealth> OnPlayerHealthChanged;
 
+   
     void Start()
     {
         ResetPlayerHealth();
@@ -26,35 +31,59 @@ public class PlayerHealth : MonoBehaviour
         OnPlayerHealthChanged?.Invoke(this);
     }
 
-    public void TakeDamage(int amount, Transform attacker)
+    public void TakeDamage(int amount, Transform attacker, float extraKnockback)
     {
-        health -= amount;
+        if (playerblock?.isBlocking == true)
+        {
+            health -= amount / 2;
+        }
+        else
+        {
+            health -= amount;
+        }
+
+        // se till att hälsan inte går under 0 eller över maxhälsan
+        health = Mathf.Clamp(health, 0, maxHealth);
+
+
 
         // Skicka till eventet att spelaren har tagit skada, så att andra scripts kan reagera på det
         OnPlayerHurt?.Invoke(new PlayerHurtPayload
         {
             Attacker = attacker,
             DamageTaken = amount,
-            Victim = this
+            Victim = this,
+            ExtraKnockback = extraKnockback
+
         });
+
 
         if (health <= 0)
         {
-            PlayerManager.Instance.OnPlayerDeath(gameObject);
-            OnPlayerDied?.Invoke(this);
-            health = maxHealth;
-            if (PlayerID == 1) {
-             ScoreBoard.instance.KillCount1 += 1;
-            ScoreBoard.instance.UpdateKillCounterUI();
+            if (PlayerID == 1) 
+            {
+                ScoreBoard.instance.KillCount1 += 1;
+                ScoreBoard.instance.UpdateKillCounterUI();
+                PlayerManager.Instance.OnPlayerDeath(gameObject);
+                OnPlayerDied?.Invoke(this);
             }
-            if (PlayerID == 2)
+            else if (PlayerID == 2)
             {
                 ScoreBoard.instance.KillCount2 += 1;
                 ScoreBoard.instance.UpdateKillCounterUI();
+                PlayerManager.Instance.OnPlayerDeath(gameObject);
+                OnPlayerDied?.Invoke(this);
+            }
+            else 
+            {
+                OnKubbkingDied?.Invoke();
             }
         }
 
+        
         //healthBar.SetHealth(health);
         OnPlayerHealthChanged?.Invoke(this);
+
+       
     }
 }   

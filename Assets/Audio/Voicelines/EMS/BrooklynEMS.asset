@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
   AudioClip: {fileID: 8300000, guid: 7acceeef002a3a54bbdfe3b45bccb600, type: 3}
   Text: I came from Brooklyn!
+  Speaker: 1
