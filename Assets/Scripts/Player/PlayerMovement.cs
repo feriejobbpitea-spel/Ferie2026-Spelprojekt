@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     // I Project Settings -> Input Manager har vi skapat "Horizontal - Player 1", "Horizontal - Player 2", "Jump - Player 1" och "Jump - Player 2"
     private int PlayerID => player.PlayerID;
     private Player player;
-
+    
     // För att kolla om spelaren nuddar marken
     [SerializeField] private float GroundCheckDistance = 1;
     [SerializeField] private float GroundCheckWidth = 1;

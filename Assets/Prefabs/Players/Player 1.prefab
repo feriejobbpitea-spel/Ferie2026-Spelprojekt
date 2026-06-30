@@ -484,6 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a1ed58d168a414aa77ba030277871f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  Name: Erich
   PlayerID: 1
   CanMove: 1
 --- !u!114 &2821278706121033750
@@ -543,6 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: 0
   maxHealth: 650
+  damageSoundClip: []
   healthBar: {fileID: 0}
   playerblock: {fileID: 0}
 --- !u!114 &5371871456530348200
@@ -560,6 +562,7 @@ MonoBehaviour:
   Rplayer: {fileID: -2738824491799416245}
   firePoint: {fileID: 416973336598152857}
   bulletPrefab: {fileID: 5572945960350513126, guid: 99351b86fb3ec4549aaba9cd2c7693ef, type: 3}
+  cooldownTime: 4
   Player1Key: H
   Player2Key: L
   UI_Icon: {fileID: 21300000, guid: c61b0e94c37bd124095786717f3e39bc, type: 3}
@@ -602,6 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
   attackFeedback: {fileID: 0}
+  AttackSoundClip: []
   attackOrigin: {fileID: 9204101100345577375}
   attackRadius: 0.44
   enemyMask:
@@ -632,6 +636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
   attackFeedback: {fileID: 0}
+  AttackSoundClip: []
   attackOrigin: {fileID: 4075210425754186942}
   attackRadius: 0.93
   enemyMask:

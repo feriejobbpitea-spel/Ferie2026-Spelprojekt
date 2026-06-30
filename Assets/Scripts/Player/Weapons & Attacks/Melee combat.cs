@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Meleecombat : WeaponBase
 {
     private int PlayerID => Player.PlayerID;
+    [SerializeField] private AudioClip[] AttackSoundClip;
 
     public Transform attackOrigin;
     public float attackRadius = 1f;
@@ -101,6 +102,11 @@ public class Meleecombat : WeaponBase
 
             enemyplayerHealth.TakeDamage(attackDamage, this.transform, extraKnockback);
 
+        }
+
+        if (Random.Range(0, 11) < 1)
+        {
+            SoundFXManager.instance.PlayRandomSoundFXClip(AttackSoundClip, transform, 1f);
         }
     }
 
