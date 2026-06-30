@@ -48,6 +48,30 @@ PrefabInstance:
       propertyPath: cooldownTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.116
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.429
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: attackDamage
       value: 100
@@ -56,6 +80,10 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 5572945960350513126, guid: 0652941672f4bff499baf441f31202d3, type: 3}
+    - target: {fileID: 5774634334001419643, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7159717833775409627, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_Name
       value: Player 4

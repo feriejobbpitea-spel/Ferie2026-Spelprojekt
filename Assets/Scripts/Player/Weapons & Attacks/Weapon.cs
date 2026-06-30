@@ -3,7 +3,6 @@ using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
-    private float cooldownTime = 4f;
     private float cooldownTimer = 0f;
     public PlayerHealth Rplayer;
     
@@ -12,6 +11,8 @@ public class Weapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bulletPrefab;
+
+    public float cooldownTime = 4;
 
     // Används för att kommunicera med UI_AttackFeedback för att uppdatera UI för vapen. T.ex. cooldowns, ammo, etc.
     // ------------------------------------------------

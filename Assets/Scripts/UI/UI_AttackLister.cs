@@ -38,6 +38,14 @@ public class UI_AttackLister : MonoBehaviour
             weapon.UI = feedback;
             spawnedUI.Add(feedback);
         }
+       
+        var blocks = player.GetComponents<PlayerBlock>();
+        foreach (PlayerBlock block in blocks)
+        {
+            var feedback = Instantiate(Prefab, transform);
+            block.attackFeedback = feedback;
+            spawnedUI.Add(feedback);
+        }
     }
 
     private void Update()

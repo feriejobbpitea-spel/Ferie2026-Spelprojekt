@@ -35,12 +35,12 @@ public class PlayerHealth : MonoBehaviour
     {
         if (playerblock?.isBlocking == true)
         {
-            health -= amount / 2;
+            //amount -= amount / 2;
+            amount = 0;
+            return;
         }
-        else
-        {
-            health -= amount;
-        }
+
+        health -= amount;
 
         // se till att hälsan inte går under 0 eller över maxhälsan
         health = Mathf.Clamp(health, 0, maxHealth);
