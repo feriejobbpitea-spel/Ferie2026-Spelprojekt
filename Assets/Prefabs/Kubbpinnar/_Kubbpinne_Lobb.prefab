@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f86f809bedbe0498117b81d2903244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  damage: 90
-  speed: 7
+  damage: 100
+  speed: 8
   upwardSpeed: 3
   sineWaveSpeed: 0
   sineWaveHeight: 0

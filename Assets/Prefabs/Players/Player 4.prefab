@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: maxHealth
-      value: 350
+      value: 370
       objectReference: {fileID: 0}
     - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: damageSoundClip
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: attackDamage
-      value: 100
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 5371871456530348200, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: bulletPrefab
