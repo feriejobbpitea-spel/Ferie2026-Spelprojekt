@@ -10644,11 +10644,14 @@ MonoBehaviour:
   Voicelines:
     _serializedList:
     - Key: {fileID: 1381896936048955567, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
-      Value: []
+      Value:
+      - {fileID: 11400000, guid: 0732fb568502d6346aae0e41cad8a35e, type: 2}
     - Key: {fileID: 1115376217604938688, guid: e983f8377884a644cb9ac5d9f3d2f68a, type: 3}
-      Value: []
+      Value:
+      - {fileID: 11400000, guid: 202b3e60500eeaa49b10434ba1241758, type: 2}
     - Key: {fileID: 1115376217604938688, guid: 33d584547141d944184df421968d787f, type: 3}
-      Value: []
+      Value:
+      - {fileID: 11400000, guid: 311230b6c2171844997f37593929650f, type: 2}
     - Key: {fileID: 1115376217604938688, guid: 9ec0b414966550f4db26af6f420f10a3, type: 3}
       Value: []
 --- !u!4 &1935392929

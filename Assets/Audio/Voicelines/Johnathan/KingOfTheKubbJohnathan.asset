@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ed8212562033c40b9341e7f1174c5d, type: 3}
-  m_Name: NameIsGeorge 1
+  m_Name: KingOfTheKubbJohnathan
   m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
-  AudioClip: {fileID: 8300000, guid: 9df0bc70bdce676479b89f7a57739612, type: 3}
-  Text: "What did the drill tell the piece of wood that tried to run? You\u2019re
-    screwed."
-  Speaker: 0
+  AudioClip: {fileID: 8300000, guid: 4624c36bda5516243a37f5c47733a12b, type: 3}
+  Text: Im the king of the kubb.
+  Speaker: 2

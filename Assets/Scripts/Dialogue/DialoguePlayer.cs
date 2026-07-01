@@ -77,11 +77,11 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
         {
             DialogueText.text += c;
             occupiedTime += TypewriterSpeed;
-            yield return new WaitForSeconds(TypewriterSpeed);
+            yield return new WaitForSecondsRealtime(TypewriterSpeed);
         }
 
         // Vänta på att ljudet spelat klart
-        yield return new WaitForSeconds(Audio.AudioClip.length - occupiedTime);
+        yield return new WaitForSecondsRealtime(Audio.AudioClip.length - occupiedTime);
 
 
         DialogueBox.SetActive(false);

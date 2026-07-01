@@ -19,20 +19,21 @@ public class FinisherVoiceline : MonoBehaviour
         PlayerHealth.OnPlayerDied -= OnPlayerDied;
     }
 
-    private void OnPlayerDied(PlayerHurtPayload deadPerson)
+    private void OnPlayerDied(PlayerHealth deadPerson)
     {
-        Player winningPlayer = PlayerManager.Instance.SpawnedPlayers.FirstOrDefault(x => x.Key != deadPerson.Victim).Key;
+        var winningPlayer = PlayerManager.Instance.SpawnedPlayers.FirstOrDefault(x => x.Key.PlayerID != deadPerson.PlayerID);
 
-        if(winningPlayer == null) 
+        if(winningPlayer.Key == null) 
         {
             return;
         }
 
-        if (!Voicelines.ContainsKey(winningPlayer))
+        if (!Voicelines.ContainsKey(winningPlayer.Value))
         {
             return;
         }
+        Debug.Log($"Winning player: {winningPlayer}");
 
-        DialoguePlayer.Instance.NewDialogue(Voicelines[winningPlayer].GetRandom(), winningPlayer.transform);
+        DialoguePlayer.Instance.NewDialogue(Voicelines[winningPlayer.Value].GetRandom(), winningPlayer.Key.transform);
     }
 }

@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     public PlayerBlock playerblock;
 
     public static event Action OnKubbkingDied;
-    public static event Action<PlayerHurtPayload> OnPlayerDied;
+    public static event Action<PlayerHealth> OnPlayerDied;
     public static event Action<PlayerHurtPayload> OnPlayerHurt;
     public static event Action<PlayerHealth> OnPlayerHealthChanged;
 
@@ -53,7 +53,6 @@ public class PlayerHealth : MonoBehaviour
         health -= amount;
 
          
-        SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClip, transform, 1f);
         
            
         // se till att hälsan inte går under 0 eller över maxhälsan
@@ -79,21 +78,25 @@ public class PlayerHealth : MonoBehaviour
             {
                 ScoreBoard.instance.Player1_WonRound();
                 PlayerManager.Instance.OnPlayerDeath(gameObject);
-                OnPlayerDied?.Invoke(hurtPayload);
+                OnPlayerDied?.Invoke(this);
             }
             else if (PlayerID == 2)
             {
                 ScoreBoard.instance.Player2_WonRound();
                 PlayerManager.Instance.OnPlayerDeath(gameObject);
-                OnPlayerDied?.Invoke(hurtPayload);
+                OnPlayerDied?.Invoke(this);
             }
             else 
             {
                 OnKubbkingDied?.Invoke();
             }
         }
+        else 
+        {
+            SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClip, transform, 1f);
+        }
 
-        
+
         //healthBar.SetHealth(health);
         OnPlayerHealthChanged?.Invoke(this);
 

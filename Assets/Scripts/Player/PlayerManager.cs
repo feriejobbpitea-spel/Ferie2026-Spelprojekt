@@ -104,13 +104,14 @@ public class PlayerManager : Singleton<PlayerManager>
         SoundFXManager.instance.PlaySoundFXClip(damageSoundClip, transform, 1f);
 
 
-        while (countdownTime > 0)
+        int realCountdownTime = countdownTime;
+        while (realCountdownTime > 0)
             {
                 countdownDisplay.text = countdownTime.ToString();
 
                 yield return new WaitForSeconds(.5f);
 
-                countdownTime--;
+            realCountdownTime--;
 
         }
             
