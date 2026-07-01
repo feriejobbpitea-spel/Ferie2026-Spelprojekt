@@ -14,7 +14,6 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
     [SerializeField] private TMP_Text DialogueText;
     [SerializeField] private Image DialogueProfile;
     [SerializeField] private CinemachineCamera CinemachineCamera;
-    [SerializeField] private float TypewriterSpeed = 0.1F;
     [SerializeField] private SerializedDictionary<Speaker, Sprite> SpeakerProfiles = new();
 
     private bool _isPlayingAudio;
@@ -76,8 +75,11 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
         foreach (char c in finalText)
         {
             DialogueText.text += c;
-            occupiedTime += TypewriterSpeed;
-            yield return new WaitForSecondsRealtime(TypewriterSpeed);
+
+            float waitTime = (Audio.AudioClip.length / finalText.Length) - 0.02F;
+
+            occupiedTime += waitTime;
+            yield return new WaitForSecondsRealtime(waitTime);
         }
 
         // Vänta på att ljudet spelat klart

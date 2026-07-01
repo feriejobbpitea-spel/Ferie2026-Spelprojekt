@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ed8212562033c40b9341e7f1174c5d, type: 3}
+  m_Name: Spawn_SomedaySomeoneWill
+  m_EditorClassIdentifier: Assembly-CSharp::AudioWithSubtitles
+  AudioClip: {fileID: 8300000, guid: eadc986e5e6492c4f9c21f919a298e1b, type: 3}
+  Text: "Someday, someone will best me, but it won\u2019t be today and it won\u2019t
+    be you."
+  Speaker: 3

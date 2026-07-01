@@ -16,6 +16,30 @@ PrefabInstance:
       propertyPath: damageSoundClip
       value: 
       objectReference: {fileID: 8300000, guid: aa3291ff4c603f742a6b69f3849499d2, type: 3}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: damageSoundClip.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'damageSoundClip.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ef6eb226d2521f498bb1a6eed33c2e7, type: 3}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'damageSoundClip.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b51e47c5acbf924daa21f692c3fe627, type: 3}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'damageSoundClip.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: efc98d412bddbe2418e7f94c5aa0b257, type: 3}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'damageSoundClip.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 0311945316f9f484d97a942c59698008, type: 3}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'damageSoundClip.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ef6eb226d2521f498bb1a6eed33c2e7, type: 3}
     - target: {fileID: 1381896936048955567, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: Name
       value: Kira
@@ -56,6 +80,30 @@ PrefabInstance:
       propertyPath: cooldownTime
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: AttackSoundClip.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ea48327adb173f3409505424dffb05e5, type: 3}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ad421ec1e2a202342b122b4fb75faedd, type: 3}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 521482b1359ddd2449788d7e6c9ff9de, type: 3}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b74eedc084cdb94caa37245cbdbaac4, type: 3}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 45d614f268762814cac8b77fd6f6ebc1, type: 3}
     - target: {fileID: 5239706942119945134, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -84,6 +132,30 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 110
       objectReference: {fileID: 0}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: AttackSoundClip.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ea48327adb173f3409505424dffb05e5, type: 3}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: ad421ec1e2a202342b122b4fb75faedd, type: 3}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 521482b1359ddd2449788d7e6c9ff9de, type: 3}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b74eedc084cdb94caa37245cbdbaac4, type: 3}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 45d614f268762814cac8b77fd6f6ebc1, type: 3}
     - target: {fileID: 5371871456530348200, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: bulletPrefab
       value: 
