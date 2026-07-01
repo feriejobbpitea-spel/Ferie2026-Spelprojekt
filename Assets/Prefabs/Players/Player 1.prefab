@@ -544,7 +544,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: 0
   maxHealth: 650
-  damageSoundClip: []
+  damageSoundClip:
+  - {fileID: 8300000, guid: 805453a1dc871de4b9b90a5041a4bad0, type: 3}
   healthBar: {fileID: 0}
   playerblock: {fileID: 0}
 --- !u!114 &5371871456530348200
@@ -605,7 +606,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
   attackFeedback: {fileID: 0}
-  AttackSoundClip: []
+  AttackSoundClip:
+  - {fileID: 8300000, guid: 518faeaa6d2605c4caf13672e85b157a, type: 3}
+  - {fileID: 8300000, guid: a951949333b53f64fbbd67544d815d9d, type: 3}
+  - {fileID: 8300000, guid: fdcd163a13cc6614ca910ad4eab9aca5, type: 3}
+  - {fileID: 8300000, guid: b066b39a1c2a4c2419d307b60f4b4f90, type: 3}
+  - {fileID: 8300000, guid: 35335823272427f43a6a6d5a9932f6bf, type: 3}
+  - {fileID: 8300000, guid: 7046feeaa08cc3746bbebf97c4ae2119, type: 3}
   attackOrigin: {fileID: 9204101100345577375}
   attackRadius: 0.44
   enemyMask:
@@ -636,7 +643,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Meleecombat
   attackFeedback: {fileID: 0}
-  AttackSoundClip: []
+  AttackSoundClip:
+  - {fileID: 8300000, guid: 518faeaa6d2605c4caf13672e85b157a, type: 3}
+  - {fileID: 8300000, guid: a951949333b53f64fbbd67544d815d9d, type: 3}
+  - {fileID: 8300000, guid: fdcd163a13cc6614ca910ad4eab9aca5, type: 3}
+  - {fileID: 8300000, guid: b066b39a1c2a4c2419d307b60f4b4f90, type: 3}
+  - {fileID: 8300000, guid: 35335823272427f43a6a6d5a9932f6bf, type: 3}
+  - {fileID: 8300000, guid: 7046feeaa08cc3746bbebf97c4ae2119, type: 3}
   attackOrigin: {fileID: 4075210425754186942}
   attackRadius: 0.93
   enemyMask:

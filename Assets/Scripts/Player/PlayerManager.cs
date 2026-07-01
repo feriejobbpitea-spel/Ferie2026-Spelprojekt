@@ -100,9 +100,11 @@ public class PlayerManager : Singleton<PlayerManager>
         }
 
         yield return new WaitForSeconds(1);
-        
-        
-            while (countdownTime > 0)
+
+        SoundFXManager.instance.PlaySoundFXClip(damageSoundClip, transform, 1f);
+
+
+        while (countdownTime > 0)
             {
                 countdownDisplay.text = countdownTime.ToString();
 
@@ -110,9 +112,8 @@ public class PlayerManager : Singleton<PlayerManager>
 
                 countdownTime--;
 
-            SoundFXManager.instance.PlaySoundFXClip(damageSoundClip, transform, 1f);
-
-            }
+        }
+            
 
             countdownDisplay.text = "FIGHT";
 
