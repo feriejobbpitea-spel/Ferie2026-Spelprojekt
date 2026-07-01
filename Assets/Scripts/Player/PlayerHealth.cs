@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     public PlayerBlock playerblock;
 
     public static event Action OnKubbkingDied;
-    public static event Action<PlayerHealth> OnPlayerDied;
+    public static event Action<PlayerHurtPayload> OnPlayerDied;
     public static event Action<PlayerHurtPayload> OnPlayerHurt;
     public static event Action<PlayerHealth> OnPlayerHealthChanged;
 
@@ -60,33 +60,32 @@ public class PlayerHealth : MonoBehaviour
         health = Mathf.Clamp(health, 0, maxHealth);
 
 
-
-        // Skicka till eventet att spelaren har tagit skada, så att andra scripts kan reagera på det
-        OnPlayerHurt?.Invoke(new PlayerHurtPayload
+        var hurtPayload = new PlayerHurtPayload
         {
             Attacker = attacker,
             DamageTaken = amount,
             Victim = this,
             ExtraKnockback = extraKnockback
 
-        });
+        };
+
+        // Skicka till eventet att spelaren har tagit skada, så att andra scripts kan reagera på det
+        OnPlayerHurt?.Invoke(hurtPayload);
 
 
         if (health <= 0)
         {
             if (PlayerID == 1) 
             {
-                ScoreBoard.instance.KillCount1 += 1;
-                ScoreBoard.instance.UpdateKillCounterUI();
+                ScoreBoard.instance.Player1_WonRound();
                 PlayerManager.Instance.OnPlayerDeath(gameObject);
-                OnPlayerDied?.Invoke(this);
+                OnPlayerDied?.Invoke(hurtPayload);
             }
             else if (PlayerID == 2)
             {
-                ScoreBoard.instance.KillCount2 += 1;
-                ScoreBoard.instance.UpdateKillCounterUI();
+                ScoreBoard.instance.Player2_WonRound();
                 PlayerManager.Instance.OnPlayerDeath(gameObject);
-                OnPlayerDied?.Invoke(this);
+                OnPlayerDied?.Invoke(hurtPayload);
             }
             else 
             {

@@ -2954,7 +2954,7 @@ MonoBehaviour:
   SkipIntroCutscene: 1
   countdownTime: 3
   countdownDisplay: {fileID: 2536585}
-  damageSoundClip: {fileID: 0}
+  damageSoundClip: {fileID: 8300000, guid: 78a8790fa1782724a8652c56b97e3b2e, type: 3}
 --- !u!4 &1510489903
 Transform:
   m_ObjectHideFlags: 0

@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: damageSoundClip
       value: 
       objectReference: {fileID: 8300000, guid: 9e10d8ee7d1c9084e9d3ac98a67a6c82, type: 3}
+    - target: {fileID: -2738824491799416245, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'damageSoundClip.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: e44adaa63bc50334abafb9e580c7d3e4, type: 3}
     - target: {fileID: 1381896936048955567, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: Name
       value: Jonathan Kubb
@@ -48,10 +52,38 @@ PrefabInstance:
       propertyPath: attackDamage
       value: 65
       objectReference: {fileID: 0}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: AttackSoundClip.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b9b9c5b4c57868c40a6ed0e4b9e70710, type: 3}
+    - target: {fileID: 4864380097091351081, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7afcd84c09e26644a9eb5d777c8a8212, type: 3}
     - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: attackDamage
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: AttackSoundClip.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b9b9c5b4c57868c40a6ed0e4b9e70710, type: 3}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7afcd84c09e26644a9eb5d777c8a8212, type: 3}
+    - target: {fileID: 5308136236837756989, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: 'AttackSoundClip.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b9b9c5b4c57868c40a6ed0e4b9e70710, type: 3}
     - target: {fileID: 5371871456530348200, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: bulletPrefab
       value: 

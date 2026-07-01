@@ -13,7 +13,8 @@ public class SkinManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI Kick;
     [SerializeField] TextMeshProUGUI Slash;
     [SerializeField] TextMeshProUGUI ooooo;
-  
+    [SerializeField] private AudioClip AttackSoundClip;
+
 
     public int PlayerID;   
     public Image sr;
@@ -23,6 +24,11 @@ public class SkinManager : MonoBehaviour
     private void Awake()
     {
         NextOption();
+        
+    }
+    private void Start()
+    {
+        SoundFXManager.instance.PlaySoundFXClip(AttackSoundClip, transform, 1f);
     }
 
     public void NextOption()

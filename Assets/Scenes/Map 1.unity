@@ -183,8 +183,6 @@ MonoBehaviour:
   WinScreen: {fileID: 1033932261}
   ScoreCounter_1: {fileID: 761152720}
   ScoreCounter_2: {fileID: 1666240016}
-  KillCount1: 0
-  KillCount2: 0
 --- !u!4 &105533232
 Transform:
   m_ObjectHideFlags: 0
@@ -1145,13 +1143,10 @@ MonoBehaviour:
       - {fileID: 11400000, guid: f67bae3cbeb96e847948f31fcf108ac0, type: 2}
     - Key: {fileID: 1115376217604938688, guid: e983f8377884a644cb9ac5d9f3d2f68a, type: 3}
       Value:
-      - {fileID: 11400000, guid: 53065070fd8d36d4fb76452552e43cce, type: 2}
       - {fileID: 11400000, guid: c90998ab9a42eea40b5028903b930d6e, type: 2}
       - {fileID: 11400000, guid: d347ec10733bcdc409e374b519e14667, type: 2}
       - {fileID: 11400000, guid: a42d142bd8e62054695a8d54d3ea38d4, type: 2}
       - {fileID: 11400000, guid: 529e58d8105b22b49b4f1c90ff7e5f09, type: 2}
-      - {fileID: 11400000, guid: 25104a8f335318a48b4392139be2c436, type: 2}
-      - {fileID: 11400000, guid: 2434182bd0aebe443899a4f2e6c07211, type: 2}
     - Key: {fileID: 1115376217604938688, guid: 33d584547141d944184df421968d787f, type: 3}
       Value:
       - {fileID: 11400000, guid: 95d3d94633c2e8e4fa8a375f7b37133b, type: 2}
@@ -1175,10 +1170,10 @@ MonoBehaviour:
   - {fileID: 1115376217604938688, guid: e983f8377884a644cb9ac5d9f3d2f68a, type: 3}
   - {fileID: 1115376217604938688, guid: 33d584547141d944184df421968d787f, type: 3}
   - {fileID: 1115376217604938688, guid: 9ec0b414966550f4db26af6f420f10a3, type: 3}
-  SkipIntroCutscene: 1
+  SkipIntroCutscene: 0
   countdownTime: 3
   countdownDisplay: {fileID: 846886789}
-  damageSoundClip: {fileID: 0}
+  damageSoundClip: {fileID: 8300000, guid: 78a8790fa1782724a8652c56b97e3b2e, type: 3}
 --- !u!4 &669971150
 Transform:
   m_ObjectHideFlags: 0
@@ -1267,7 +1262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 527dcd261df6cb141881e3b8f7291954, type: 2}
   m_sharedMaterial: {fileID: 3144234394262128677, guid: 527dcd261df6cb141881e3b8f7291954, type: 2}
@@ -10617,6 +10612,60 @@ RectTransform:
   m_AnchoredPosition: {x: 112, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1935392927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1935392929}
+  - component: {fileID: 1935392928}
+  m_Layer: 0
+  m_Name: FinisherVoicelines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1935392928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935392927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc26034474169634e8bcd2387802f995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinisherVoiceline
+  Voicelines:
+    _serializedList:
+    - Key: {fileID: 1381896936048955567, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      Value: []
+    - Key: {fileID: 1115376217604938688, guid: e983f8377884a644cb9ac5d9f3d2f68a, type: 3}
+      Value: []
+    - Key: {fileID: 1115376217604938688, guid: 33d584547141d944184df421968d787f, type: 3}
+      Value: []
+    - Key: {fileID: 1115376217604938688, guid: 9ec0b414966550f4db26af6f420f10a3, type: 3}
+      Value: []
+--- !u!4 &1935392929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935392927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968412129
 GameObject:
   m_ObjectHideFlags: 0
@@ -11739,6 +11788,7 @@ SceneRoots:
   - {fileID: 1033932262}
   - {fileID: 248917308}
   - {fileID: 1513175662}
+  - {fileID: 1935392929}
   - {fileID: 1523914580}
   - {fileID: 1149338527}
   - {fileID: 105533232}

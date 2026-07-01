@@ -19,9 +19,11 @@ public class ScoreBoard : MonoBehaviour
     [SerializeField] private Slider ScoreCounter_1;
     [SerializeField] private Slider ScoreCounter_2;
 
-    [HideInInspector] public int KillCount1;
-    [HideInInspector] public int KillCount2;
-   
+    private int KillCount1;
+    private int KillCount2;
+
+    public static Action OnPlayerWonRound;
+
     private void Awake()
     {
         WinScreen.SetActive(false);
@@ -93,6 +95,20 @@ public class ScoreBoard : MonoBehaviour
             WinText.SetText("Player 1 Winner");
             StartCoroutine(ExampleCoroutine());
         }
+    }
+
+    public void Player1_WonRound()
+    {
+        KillCount1++;
+        UpdateKillCounterUI();
+        OnPlayerWonRound?.Invoke();
+    }
+
+    public void Player2_WonRound() 
+    {
+        KillCount2++;
+        UpdateKillCounterUI();
+        OnPlayerWonRound?.Invoke();
     }
    
 }
