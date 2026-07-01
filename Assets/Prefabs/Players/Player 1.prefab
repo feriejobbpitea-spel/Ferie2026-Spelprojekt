@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   health: 0
-  maxHealth: 670
+  maxHealth: 650
   damageSoundClip:
   - {fileID: 8300000, guid: 805453a1dc871de4b9b90a5041a4bad0, type: 3}
   healthBar: {fileID: 0}
