@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 9b336c02eba952d44987d67e5f8711ea
+guid: 8029bbaafcdd32b45911d97839c384e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3232930161023820329
-    second: Sprite-jonathan hit slash_0
+      213: 7251043411906735348
+    second: Sprite-jonmathan kubb jump and landa_0
   - first:
-      213: -5105884599963875345
-    second: Sprite-jonathan hit slash_1
+      213: 8632591644223430544
+    second: Sprite-jonmathan kubb jump and landa_1
   - first:
-      213: 5797312965348087255
-    second: Sprite-jonathan hit slash_2
+      213: -2290190586961070425
+    second: Sprite-jonmathan kubb jump and landa_2
   - first:
-      213: 2984503962129996422
-    second: Sprite-jonathan hit slash_3
+      213: -4315370019672571637
+    second: Sprite-jonmathan kubb jump and landa_3
+  - first:
+      213: 8954301922113211768
+    second: Sprite-jonmathan kubb jump and landa_4
+  - first:
+      213: -5471921946510090999
+    second: Sprite-jonmathan kubb jump and landa_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,11 +111,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_0
+      name: Sprite-jonmathan kubb jump and landa_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 922a8774adcaddc20800000000000000
-      internalID: 3232930161023820329
+      spriteID: 4fc23a1c091e0a460800000000000000
+      internalID: 7251043411906735348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_1
+      name: Sprite-jonmathan kubb jump and landa_1
       rect:
         serializedVersion: 2
         x: 64
@@ -146,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe7040b22014429b0800000000000000
-      internalID: -5105884599963875345
+      spriteID: 09f51fcec502dc770800000000000000
+      internalID: 8632591644223430544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_2
+      name: Sprite-jonmathan kubb jump and landa_2
       rect:
         serializedVersion: 2
         x: 128
@@ -168,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d5d65f2d61347050800000000000000
-      internalID: 5797312965348087255
+      spriteID: 7a6fd3c8bcb9730e0800000000000000
+      internalID: -2290190586961070425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_3
+      name: Sprite-jonmathan kubb jump and landa_3
       rect:
         serializedVersion: 2
         x: 192
@@ -190,8 +209,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68a118d7a861b6920800000000000000
-      internalID: 2984503962129996422
+      spriteID: b01cb07b4d9bc14c0800000000000000
+      internalID: -4315370019672571637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-jonmathan kubb jump and landa_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87dc72ff722144c70800000000000000
+      internalID: 8954301922113211768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-jonmathan kubb jump and landa_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d1a9b2bf3df04b0800000000000000
+      internalID: -5471921946510090999
       vertices: []
       indices: 
       edges: []
@@ -200,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 88e86614951618f4c8cef80a71da750f
+    spriteID: 1d1839f7ea890ac48bbdec3843d15ea7
     internalID: 0
     vertices: []
     indices: 
@@ -212,10 +275,12 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-jonathan hit slash_0: 3232930161023820329
-      Sprite-jonathan hit slash_1: -5105884599963875345
-      Sprite-jonathan hit slash_2: 5797312965348087255
-      Sprite-jonathan hit slash_3: 2984503962129996422
+      Sprite-jonmathan kubb jump and landa_0: 7251043411906735348
+      Sprite-jonmathan kubb jump and landa_1: 8632591644223430544
+      Sprite-jonmathan kubb jump and landa_2: -2290190586961070425
+      Sprite-jonmathan kubb jump and landa_3: -4315370019672571637
+      Sprite-jonmathan kubb jump and landa_4: 8954301922113211768
+      Sprite-jonmathan kubb jump and landa_5: -5471921946510090999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

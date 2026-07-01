@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: cbae0e8d09be0fd4bab5555218d2cff7
+guid: 2bc10c5901a97ce49a5695552b24118b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -528022615308443511
-    second: Sprite-jonathan kubb runs_0
+      213: -5716820161262115229
+    second: Sprite-jonathan kubb idel_0
   - first:
-      213: -5033417664558910719
-    second: Sprite-jonathan kubb runs_1
+      213: 5206613679755494141
+    second: Sprite-jonathan kubb idel_1
   - first:
-      213: -1598548344139091184
-    second: Sprite-jonathan kubb runs_2
+      213: 2403132613129790111
+    second: Sprite-jonathan kubb idel_2
   - first:
-      213: -1982522895221446752
-    second: Sprite-jonathan kubb runs_3
+      213: -7463502437029695618
+    second: Sprite-jonathan kubb idel_3
+  - first:
+      213: 2460877055362995974
+    second: Sprite-jonathan kubb idel_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,11 +108,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-jonathan kubb runs_0
+      name: Sprite-jonathan kubb idel_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 980ea2d9a361ca8f0800000000000000
-      internalID: -528022615308443511
+      spriteID: 3662e233a56c9a0b0800000000000000
+      internalID: -5716820161262115229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan kubb runs_1
+      name: Sprite-jonathan kubb idel_1
       rect:
         serializedVersion: 2
         x: 64
@@ -146,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1033ac16d45b52ab0800000000000000
-      internalID: -5033417664558910719
+      spriteID: df204805e8b914840800000000000000
+      internalID: 5206613679755494141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan kubb runs_2
+      name: Sprite-jonathan kubb idel_2
       rect:
         serializedVersion: 2
         x: 128
@@ -168,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 013fc4f10c0d0d9e0800000000000000
-      internalID: -1598548344139091184
+      spriteID: f92e1c91164a95120800000000000000
+      internalID: 2403132613129790111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan kubb runs_3
+      name: Sprite-jonathan kubb idel_3
       rect:
         serializedVersion: 2
         x: 192
@@ -190,8 +206,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a72f3f3ee9ac74e0800000000000000
-      internalID: -1982522895221446752
+      spriteID: e7f259ca3105c6890800000000000000
+      internalID: -7463502437029695618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite-jonathan kubb idel_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60712d0c4aac62220800000000000000
+      internalID: 2460877055362995974
       vertices: []
       indices: 
       edges: []
@@ -200,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 771a89bd128d9104495069c4340a4e7c
+    spriteID: 4823b40816fdad74399a64061c8bfc61
     internalID: 0
     vertices: []
     indices: 
@@ -212,10 +250,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-jonathan kubb runs_0: -528022615308443511
-      Sprite-jonathan kubb runs_1: -5033417664558910719
-      Sprite-jonathan kubb runs_2: -1598548344139091184
-      Sprite-jonathan kubb runs_3: -1982522895221446752
+      Sprite-jonathan kubb idel_0: -5716820161262115229
+      Sprite-jonathan kubb idel_1: 5206613679755494141
+      Sprite-jonathan kubb idel_2: 2403132613129790111
+      Sprite-jonathan kubb idel_3: -7463502437029695618
+      Sprite-jonathan kubb idel_4: 2460877055362995974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

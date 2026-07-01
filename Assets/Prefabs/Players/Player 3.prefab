@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2651478061627270701, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e0ad80d7d9add714fae5253ecbaf914c, type: 2}
     - target: {fileID: 2821278706121033750, guid: 56bbb6975931d1948aaa0634ed728053, type: 3}
       propertyPath: moveSpeed
       value: 3.5
