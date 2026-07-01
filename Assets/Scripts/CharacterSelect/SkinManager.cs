@@ -9,10 +9,13 @@ using UnityEngine.UI;
 
 public class SkinManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI Health;
-    [SerializeField] TextMeshProUGUI Kick;
-    [SerializeField] TextMeshProUGUI Slash;
-    [SerializeField] TextMeshProUGUI ooooo;
+    [SerializeField] TextMeshProUGUI CharacterSpeed;
+    [SerializeField] TextMeshProUGUI CharacterHealth;
+    [SerializeField] TextMeshProUGUI CharacterName;
+    
+    [SerializeField] TextMeshProUGUI KubbpinneType;
+    [SerializeField] TextMeshProUGUI KubbpinneDescription;
+
     [SerializeField] private AudioClip AttackSoundClip;
 
 
@@ -39,23 +42,7 @@ public class SkinManager : MonoBehaviour
             selectedSkin = 0;
         }
         
-        
-        int maxHealth = skins[selectedSkin].GetComponent<PlayerHealth>().maxHealth;
-        Health.text = maxHealth.ToString();
-
-        skins[selectedSkin].GetComponents<Meleecombat>();
-
-
-        Meleecombat[] Melee = skins[selectedSkin].GetComponents<Meleecombat>();
-
-        Kick.text = Melee[0].attackDamage.ToString();
-        Slash.text = Melee[1].attackDamage.ToString();
-
-        string namn = skins[selectedSkin].GetComponent<Player>().Name;
-        ooooo.text = namn.ToString();
-
-
-        sr.sprite = skins[selectedSkin].GetComponent<SpriteRenderer>().sprite;
+       
 
         if (PlayerID == 1)
         {
@@ -67,6 +54,7 @@ public class SkinManager : MonoBehaviour
             PlayerManager.player2ID = selectedSkin;
 
         }
+        UpdateUI();
     }
 
     public void BackOption()
@@ -77,19 +65,6 @@ public class SkinManager : MonoBehaviour
             selectedSkin = skins.Count -1;
         }
 
-        int maxHealth = skins[selectedSkin].GetComponent<PlayerHealth>().maxHealth;
-        Health.text = maxHealth.ToString();
-
-        Meleecombat[] Melee = skins[selectedSkin].GetComponents<Meleecombat>();
-        Kick.text = Melee[0].attackDamage.ToString();
-        Slash.text = Melee[1].attackDamage.ToString();
-
-        string namn = skins[selectedSkin].GetComponent<Player>().Name;
-        ooooo.text = namn.ToString();
-
-        sr.sprite = skins[selectedSkin].GetComponent<SpriteRenderer>().sprite;
-        ;
-
         if (PlayerID == 1)
         {
             PlayerManager.player1ID = selectedSkin;
@@ -100,5 +75,43 @@ public class SkinManager : MonoBehaviour
             PlayerManager.player2ID = selectedSkin;
 
         }
+
+        UpdateUI();
+    }
+
+    private void UpdateUI() 
+    {
+        // Uppdatera hälsa        
+        int maxHealth = skins[selectedSkin].GetComponent<PlayerHealth>().maxHealth;
+        CharacterHealth.text = $"Health: {maxHealth}";
+
+        // Updatera karaktärens namn
+        string namn = skins[selectedSkin].GetComponent<Player>().Name;
+        CharacterName.text = $"{namn}";
+
+        // Updatera karaktärens hastighet
+        float speed = skins[selectedSkin].GetComponent<PlayerMovement>().moveSpeed;
+        CharacterSpeed.text = $"Speed: {speed}";
+
+        // Updatera karaktärens kubbpinne-typ
+        GameObject bulletPrefab = skins[selectedSkin].GetComponent<Weapon>().bulletPrefab;
+        
+        /// Jag har lagt till en kubbpinne script på alla kubbpinnar där vi kan fylla in lite data!
+        Kubbpinne kubbpinneData = bulletPrefab.GetComponent<Kubbpinne>();
+
+        if (kubbpinneData != null)
+        {
+            KubbpinneType.text = $"{kubbpinneData.Name}";
+            KubbpinneDescription.text = $"{kubbpinneData.Description}";
+        }
+
+        // Uppdatera karaktärens bild
+        sr.sprite = skins[selectedSkin].GetComponent<SpriteRenderer>().sprite;
+
+
+        /*        Meleecombat[] Melee = skins[selectedSkin].GetComponents<Meleecombat>();
+
+                CharacterSpeed.text = Melee[0].attackDamage.ToString();
+                CharacterHealth.text = Melee[1].attackDamage.ToString();*/
     }
 }

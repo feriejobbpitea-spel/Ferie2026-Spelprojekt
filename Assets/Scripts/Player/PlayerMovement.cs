@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float GroundCheckDistance = 1;
     [SerializeField] private float GroundCheckWidth = 1;
     [SerializeField] private LayerMask GroundLayerMask;
-    [SerializeField] private float moveSpeed = 5.0F;
+    public float moveSpeed = 5.0F;
     [SerializeField] private float jumpPower = 4.0F;
   
 
