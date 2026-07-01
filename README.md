@@ -1,7 +1,7 @@
 # 🎮 Feriearbete i Piteå 2026 – *Kubbers*
 
-[![Spela på Itch.io]([https://img.shields.io/badge/Spela%20på-Itch.io-FA5C5C?logo=itch-io&logoColor=white&style=flat)](https://spelutvecklingpiteo.itch.io/revenge-of-the-gramps](https://spelutvecklingpitea.itch.io/kubbers))
-[![Första Dagen-presentation](https://docs.google.com/presentation/d/17uvEf0bl_Ay8APkxrAVjQXANO2k3wgBqyNJSq0l422k/edit?usp=sharing)
+[![Spela på Itch.io]([https://img.shields.io/badge/Spela%20på-Itch.io-FA5C5C?logo=itch-io&logoColor=white&style=flat)](https://spelutvecklingpiteo.itch.io/revenge-of-the-gramps](https://spelutvecklingpitea.itch.io/kubbers))]
+[![Första Dagen-presentation]([https://img.shields.io/badge/Spela%20på-Itch.io-FA5C5C?logo=itch-io&logoColor=white&style=flat)](https://docs.google.com/presentation/d/17uvEf0bl_Ay8APkxrAVjQXANO2k3wgBqyNJSq0l422k/edit?usp=sharing)
 
 ---
 
