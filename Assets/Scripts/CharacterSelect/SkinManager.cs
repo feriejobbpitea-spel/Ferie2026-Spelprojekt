@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class SkinManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI CharacterSpeed;
@@ -18,7 +19,9 @@ public class SkinManager : MonoBehaviour
 
     [SerializeField] private AudioClip AttackSoundClip;
 
-
+    private float cooldownTimer;
+    private float cooldownTime = 0.2f;
+    public bool characterselet;
     public int PlayerID;   
     public Image sr;
     public List<Player> skins = new List<Player>();
@@ -34,15 +37,48 @@ public class SkinManager : MonoBehaviour
         SoundFXManager.instance.PlaySoundFXClip(AttackSoundClip, transform, 1f);
     }
 
+    
+    private void Update()
+    {
+        if (characterselet == true)
+        {
+
+            float input = Input.GetAxisRaw("Horizontal - Player 2");
+            if (cooldownTimer <= 0)
+            {
+              
+
+                if (input > 0f)
+                {
+                  NextOption();
+                    
+                }
+
+               
+
+                if (input < 0f)
+                {
+                  BackOption();
+                   
+                }
+                cooldownTimer = cooldownTime;
+            }
+            else
+            {
+                cooldownTimer -= Time.deltaTime;
+            }
+        }
+     
+    }
     public void NextOption()
     {
-        selectedSkin = selectedSkin + 1;
-        if (selectedSkin == skins.Count)
-        {
-            selectedSkin = 0;
-        }
-        
        
+         selectedSkin = selectedSkin + 1;
+         if (selectedSkin == skins.Count)
+         {
+            selectedSkin = 0;
+         }
+
 
         if (PlayerID == 1)
         {
@@ -59,7 +95,8 @@ public class SkinManager : MonoBehaviour
 
     public void BackOption()
     {
-        selectedSkin = selectedSkin - 1;
+       
+            selectedSkin = selectedSkin - 1;
         if (selectedSkin < 0)
         {
             selectedSkin = skins.Count -1;
