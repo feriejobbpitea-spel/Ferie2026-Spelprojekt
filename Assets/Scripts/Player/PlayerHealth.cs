@@ -43,6 +43,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount, Transform attacker, float extraKnockback)
     {
+        if (PlayerManager.DoNotStart)
+        {
+            return;
+        }
         if (playerblock?.isBlocking == true)
         {
             //amount -= amount / 2;
