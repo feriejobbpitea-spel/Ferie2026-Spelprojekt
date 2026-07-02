@@ -11,6 +11,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
 {
     [SerializeField] private AudioSource AudioSource;
     [SerializeField] private GameObject DialogueBox;
+    [SerializeField] private Canvas OtherHUD;
     [SerializeField] private TMP_Text DialogueText;
     [SerializeField] private Image DialogueProfile;
     [SerializeField] private CinemachineCamera CinemachineCamera;
@@ -26,6 +27,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
     protected override void Awake()
     {
         base.Awake();
+        OtherHUD.enabled = false;
         DialogueBox.SetActive(false);
     }
 
@@ -47,6 +49,8 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
 
     private IEnumerator Internal_PlayNewDialogue()
     {
+        OtherHUD.enabled = false;
+
         var Dialogue = queuedVoicelines.Dequeue();
         AudioWithSubtitles Audio = Dialogue.Key;
         Transform Target = Dialogue.Value;
@@ -83,7 +87,7 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
         }
 
         // Vänta på att ljudet spelat klart
-        yield return new WaitForSecondsRealtime(Audio.AudioClip.length - occupiedTime);
+        yield return new WaitForSecondsRealtime(Audio.AudioClip.length - occupiedTime + 1);
 
 
         DialogueBox.SetActive(false);
@@ -97,5 +101,8 @@ public class DialoguePlayer : Singleton<DialoguePlayer>
         {
             StartCoroutine(Internal_PlayNewDialogue());
         }
+        else
+            OtherHUD.enabled = true;
+
     }
 }

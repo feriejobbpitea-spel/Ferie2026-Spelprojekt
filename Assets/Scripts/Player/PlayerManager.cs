@@ -10,6 +10,8 @@ public class PlayerManager : Singleton<PlayerManager>
 {
     [SerializeField] private List<Player> PlayerPrefabs = new();
     [SerializeField] private bool SkipIntroCutscene;
+    [SerializeField] private AudioSource Music; 
+    [SerializeField] private GameObject HUDToDisable; 
     
     // Call-a från "character select skärmen" för att välja en prefab för varje spelare, så att vi kan spawna rätt karaktär när spelet startar
     public static int player1ID = 3;
@@ -69,6 +71,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private IEnumerator PlayFinisher(GameObject Player) 
     {
+        Music.Stop();
         DoNotStart = true;
         Time.timeScale = 0.2F;
         Player.SetActive(false);
@@ -84,7 +87,9 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         PrepareNextRound();
 
-        if(BeginRoundDialogue.Instance == null) 
+        yield return new WaitForSeconds(2);
+
+        if (BeginRoundDialogue.Instance == null) 
         {
             Debug.LogError($"Lägg till scriptet '{nameof(BeginRoundDialogue)}' i scenen.");
         }
@@ -131,6 +136,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
 
             yield return new WaitForSeconds(1f);
+        Music.Play();
 
             countdownDisplay.gameObject.SetActive(false);
 

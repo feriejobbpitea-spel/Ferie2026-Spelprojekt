@@ -30,6 +30,6 @@ public class BeginRoundDialogue : Singleton<BeginRoundDialogue>
         AudioWithSubtitles audioToPlay = AudioToPlay[playerWithCorrectID.Value].GetRandom();
 
         DialoguePlayer.Instance.NewDialogue(audioToPlay, playerWithCorrectID.Key.transform);
-        return audioToPlay.AudioClip.length;
+        return audioToPlay.AudioClip.length + 1;
     }
 }

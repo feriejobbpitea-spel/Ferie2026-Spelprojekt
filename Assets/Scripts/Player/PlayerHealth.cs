@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
 
     [SerializeField] private AudioClip[] damageSoundClip;
+    [SerializeField] private AudioClip TakeDamageSFX;
     
     public HealthBar healthBar;
     public PlayerBlock playerblock;
@@ -97,7 +98,10 @@ public class PlayerHealth : MonoBehaviour
         }
         else 
         {
-            SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClip, transform, 1f);
+            if(UnityEngine.Random.Range(0, 10) == 1)
+                SoundFXManager.instance.PlayRandomSoundFXClip(damageSoundClip, transform, 1f);
+            
+            SoundFXManager.instance.PlaySoundFXClip(TakeDamageSFX, transform, 1f);
         }
 
 

@@ -17,7 +17,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask GroundLayerMask;
     public float moveSpeed = 5.0F;
     [SerializeField] private float jumpPower = 4.0F;
-  
+
+    [SerializeField] private AudioClip JumpSFX;
+    [SerializeField] private AudioClip LandSFX;
 
 
     [HideInInspector]
@@ -70,8 +72,13 @@ public class PlayerMovement : MonoBehaviour
         // Här kollar vi om vi landat
         if (IsGrounded()) 
         {
+            if (hasJumped && hasAlreadyReachedPeak)
+            {
+                SoundFXManager.instance.PlaySoundFXClip(LandSFX, transform, .3F);
+            }
             hasJumped = false;
             hasAlreadyReachedPeak = false;
+            
             OnLanded?.Invoke();
         }
 
@@ -92,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 hasJumped = true;
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+                SoundFXManager.instance.PlaySoundFXClip(JumpSFX, transform, 1);
                 OnJumped?.Invoke();
                 if (!IsGrounded())
                 {

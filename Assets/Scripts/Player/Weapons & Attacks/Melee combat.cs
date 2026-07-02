@@ -7,6 +7,7 @@ public class Meleecombat : WeaponBase
 {
     private int PlayerID => Player.PlayerID;
     [SerializeField] private AudioClip[] AttackSoundClip;
+    [SerializeField] private AudioClip AttackSFX;
 
     public Transform attackOrigin;
     public float attackRadius = 1f;
@@ -87,6 +88,8 @@ public class Meleecombat : WeaponBase
             isActive = true;
             StartCoroutine(EnableAndDisableVFX());
         }
+
+        SoundFXManager.instance.PlaySoundFXClip(AttackSFX,transform, .5F);
 
         UI.PressedButton();
 

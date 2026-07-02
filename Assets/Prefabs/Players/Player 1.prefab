@@ -507,6 +507,8 @@ MonoBehaviour:
     m_Bits: 1
   moveSpeed: 3
   jumpPower: 4
+  JumpSFX: {fileID: 8300000, guid: 1d2ed770c1246a94a95ccca1771eb2eb, type: 3}
+  LandSFX: {fileID: 8300000, guid: b6c0c5e0450b5f547b646f77f9219353, type: 3}
   horizontalInput: 0
   rb: {fileID: 278087509501437113}
 --- !u!95 &2651478061627270701
@@ -547,6 +549,7 @@ MonoBehaviour:
   maxHealth: 650
   damageSoundClip:
   - {fileID: 8300000, guid: 805453a1dc871de4b9b90a5041a4bad0, type: 3}
+  TakeDamageSFX: {fileID: 8300000, guid: d9d40a68fdefc2745ab311438e0579e8, type: 3}
   healthBar: {fileID: 0}
   playerblock: {fileID: 0}
 --- !u!114 &5371871456530348200
@@ -614,6 +617,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b066b39a1c2a4c2419d307b60f4b4f90, type: 3}
   - {fileID: 8300000, guid: 35335823272427f43a6a6d5a9932f6bf, type: 3}
   - {fileID: 8300000, guid: 7046feeaa08cc3746bbebf97c4ae2119, type: 3}
+  AttackSFX: {fileID: 8300000, guid: a19e4d1a53dd3cb46882a6f0507c40bf, type: 3}
   attackOrigin: {fileID: 9204101100345577375}
   attackRadius: 0.44
   enemyMask:
@@ -651,6 +655,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b066b39a1c2a4c2419d307b60f4b4f90, type: 3}
   - {fileID: 8300000, guid: 35335823272427f43a6a6d5a9932f6bf, type: 3}
   - {fileID: 8300000, guid: 7046feeaa08cc3746bbebf97c4ae2119, type: 3}
+  AttackSFX: {fileID: 8300000, guid: b2e6f6953fb55094ebe1b7285410fe9f, type: 3}
   attackOrigin: {fileID: 4075210425754186942}
   attackRadius: 0.93
   enemyMask:
