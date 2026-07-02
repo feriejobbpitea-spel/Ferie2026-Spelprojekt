@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5332201524708631625, guid: 57f2600792c3fc94f9c766cd80376df1, type: 3}
+      propertyPath: Name
+      value: Kubbstick - Boomerang
+      objectReference: {fileID: 0}
+    - target: {fileID: -5332201524708631625, guid: 57f2600792c3fc94f9c766cd80376df1, type: 3}
+      propertyPath: Description
+      value: After being thrown it will return to the user.
+      objectReference: {fileID: 0}
     - target: {fileID: 1178904191984003848, guid: 57f2600792c3fc94f9c766cd80376df1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.7561026

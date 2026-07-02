@@ -1,19 +1,49 @@
 fileFormatVersion: 2
-guid: 9b336c02eba952d44987d67e5f8711ea
+guid: 2f95be01e28e021449f98d617ecfe32a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3232930161023820329
-    second: Sprite-jonathan hit slash_0
+      213: -447000487157930039
+    second: jumper_0
   - first:
-      213: -5105884599963875345
-    second: Sprite-jonathan hit slash_1
+      213: -3689546137725242864
+    second: jumper_1
   - first:
-      213: 5797312965348087255
-    second: Sprite-jonathan hit slash_2
+      213: 4150480980438182779
+    second: jumper_2
   - first:
-      213: 2984503962129996422
-    second: Sprite-jonathan hit slash_3
+      213: 1802135386828092610
+    second: jumper_3
+  - first:
+      213: -3512666959944916416
+    second: jumper_4
+  - first:
+      213: -8878259317713968860
+    second: jumper_5
+  - first:
+      213: 2285366486309544040
+    second: jumper_6
+  - first:
+      213: -726892367751258691
+    second: jumper_7
+  - first:
+      213: 2830884127133846660
+    second: jumper_8
+  - first:
+      213: -7273913193398487923
+    second: jumper_9
+  - first:
+      213: -1191849444919089643
+    second: jumper_10
+  - first:
+      213: -4440996201603412167
+    second: jumper_11
+  - first:
+      213: -5348779788820829537
+    second: jumper_12
+  - first:
+      213: 838792754523238374
+    second: jumper_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,11 +135,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_0
+      name: jumper_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 922a8774adcaddc20800000000000000
-      internalID: 3232930161023820329
+      spriteID: 9c7668cdc6febc9f0800000000000000
+      internalID: -447000487157930039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_1
+      name: jumper_1
       rect:
         serializedVersion: 2
         x: 64
@@ -146,14 +189,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe7040b22014429b0800000000000000
-      internalID: -5105884599963875345
+      spriteID: 012f876f5591cccc0800000000000000
+      internalID: -3689546137725242864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_2
+      name: jumper_2
       rect:
         serializedVersion: 2
         x: 128
@@ -168,14 +211,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d5d65f2d61347050800000000000000
-      internalID: 5797312965348087255
+      spriteID: b7b68062678799930800000000000000
+      internalID: 4150480980438182779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite-jonathan hit slash_3
+      name: jumper_3
       rect:
         serializedVersion: 2
         x: 192
@@ -190,8 +233,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68a118d7a861b6920800000000000000
-      internalID: 2984503962129996422
+      spriteID: 2c4bc011698720910800000000000000
+      internalID: 1802135386828092610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumper_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0426b36c200804fc0800000000000000
+      internalID: -3512666959944916416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumper_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4216bd780361ac480800000000000000
+      internalID: -8878259317713968860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumper_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860201ef5b047bf10800000000000000
+      internalID: 2285366486309544040
       vertices: []
       indices: 
       edges: []
@@ -200,7 +309,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 88e86614951618f4c8cef80a71da750f
+    spriteID: 642fff82adc056b44946c6158f50ccc5
     internalID: 0
     vertices: []
     indices: 
@@ -212,10 +321,13 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sprite-jonathan hit slash_0: 3232930161023820329
-      Sprite-jonathan hit slash_1: -5105884599963875345
-      Sprite-jonathan hit slash_2: 5797312965348087255
-      Sprite-jonathan hit slash_3: 2984503962129996422
+      jumper_0: -447000487157930039
+      jumper_1: -3689546137725242864
+      jumper_2: 4150480980438182779
+      jumper_3: 1802135386828092610
+      jumper_4: -3512666959944916416
+      jumper_5: -8878259317713968860
+      jumper_6: 2285366486309544040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
