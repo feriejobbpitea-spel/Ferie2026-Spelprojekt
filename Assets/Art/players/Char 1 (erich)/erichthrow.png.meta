@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 22bcab8dda034a14e96c040da77ffceb
+guid: e2f7282d529b6f7458c8b30cc2cdacb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6226492245494716243
-    second: erichrunner_0
+      213: -2038842824833483740
+    second: erichthrow_0
   - first:
-      213: -1303673196236931148
-    second: erichrunner_1
+      213: -697015648175839581
+    second: erichthrow_1
   - first:
-      213: -1618899131952902292
-    second: erichrunner_2
+      213: 4170613661990623487
+    second: erichthrow_2
   - first:
-      213: 635016077938050305
-    second: erichrunner_3
+      213: 5390863575852864504
+    second: erichthrow_3
   - first:
-      213: -4563955992556457217
-    second: erichrunner_4
+      213: -3503655259999888114
+    second: erichthrow_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,11 +108,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: erichrunner_0
+      name: erichthrow_0
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da82096ca4e0799a0800000000000000
-      internalID: -6226492245494716243
+      spriteID: 42c32f8c04394b3e0800000000000000
+      internalID: -2038842824833483740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: erichrunner_1
+      name: erichthrow_1
       rect:
         serializedVersion: 2
         x: 64
@@ -149,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bf791b922c68ede0800000000000000
-      internalID: -1303673196236931148
+      spriteID: 3a6279ff5f3b356f0800000000000000
+      internalID: -697015648175839581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: erichrunner_2
+      name: erichthrow_2
       rect:
         serializedVersion: 2
         x: 128
@@ -171,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c6f42c811d38889e0800000000000000
-      internalID: -1618899131952902292
+      spriteID: ff8975a570ff0e930800000000000000
+      internalID: 4170613661990623487
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: erichrunner_3
+      name: erichthrow_3
       rect:
         serializedVersion: 2
         x: 192
@@ -193,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 105c82822c700d800800000000000000
-      internalID: 635016077938050305
+      spriteID: 8f35d473cd130da40800000000000000
+      internalID: 5390863575852864504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: erichrunner_4
+      name: erichthrow_4
       rect:
         serializedVersion: 2
         x: 256
@@ -215,8 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff23825a43299a0c0800000000000000
-      internalID: -4563955992556457217
+      spriteID: e0d174caa14806fc0800000000000000
+      internalID: -3503655259999888114
       vertices: []
       indices: 
       edges: []
@@ -225,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 09445741709ef344db19a5bdd01f3fe7
+    spriteID: 1f5920ed7a9a10e4c9153f8c2f4bd876
     internalID: 0
     vertices: []
     indices: 
@@ -237,11 +250,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      erichrunner_0: -6226492245494716243
-      erichrunner_1: -1303673196236931148
-      erichrunner_2: -1618899131952902292
-      erichrunner_3: 635016077938050305
-      erichrunner_4: -4563955992556457217
+      erichthrow_0: -2038842824833483740
+      erichthrow_1: -697015648175839581
+      erichthrow_2: 4170613661990623487
+      erichthrow_3: 5390863575852864504
+      erichthrow_4: -3503655259999888114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
