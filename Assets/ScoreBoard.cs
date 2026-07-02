@@ -106,6 +106,7 @@ public class ScoreBoard : MonoBehaviour
 
     public void Player2_WonRound() 
     {
+      
         KillCount2++;
         UpdateKillCounterUI();
         OnPlayerWonRound?.Invoke();
