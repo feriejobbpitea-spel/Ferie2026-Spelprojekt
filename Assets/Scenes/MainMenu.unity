@@ -2909,7 +2909,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7508279767257947810, guid: fcccfcf778ed1304ea89ed1691d31854, type: 3}
       propertyPath: m_text
-      value: Narrator |  Kevin Sandin
+      value: Narrator |  Kevin Liljestrand
       objectReference: {fileID: 0}
     - target: {fileID: 7508279767257947810, guid: fcccfcf778ed1304ea89ed1691d31854, type: 3}
       propertyPath: m_sharedMaterial
@@ -3003,7 +3003,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7508279767257947810, guid: fcccfcf778ed1304ea89ed1691d31854, type: 3}
       propertyPath: m_text
-      value: Kira | Ramatu bangura
+      value: Kira | Ramatu Bangura
       objectReference: {fileID: 0}
     - target: {fileID: 7508279767257947810, guid: fcccfcf778ed1304ea89ed1691d31854, type: 3}
       propertyPath: m_sharedMaterial
