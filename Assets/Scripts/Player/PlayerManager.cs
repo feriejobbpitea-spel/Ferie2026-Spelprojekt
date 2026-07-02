@@ -23,6 +23,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public static Action OnRoundPrepared;
     public static Action OnRoundStart;
+    public static bool DoNotStart;
 
     protected override void Awake()
     {
@@ -68,12 +69,14 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private IEnumerator PlayFinisher(GameObject Player) 
     {
+        DoNotStart = true;
         Time.timeScale = 0.2F;
         Player.SetActive(false);
         yield return new WaitForSecondsRealtime(2);
         Time.timeScale = 1;
 
         yield return new WaitForSeconds(3);
+        DoNotStart = false;
         StartCoroutine(NewRoundManager());
     }
 
