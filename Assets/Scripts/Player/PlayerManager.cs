@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,6 +29,8 @@ public class PlayerManager : Singleton<PlayerManager>
         base.Awake();
 
         SpawnedPlayers.Clear();
+
+        countdownDisplay.text = string.Empty;
 
       /*  if (player1ID < 0)
             player1ID = UnityEngine.Random.Range(0, PlayerPrefabs.Count);
@@ -108,6 +111,8 @@ public class PlayerManager : Singleton<PlayerManager>
         int realCountdownTime = countdownTime;
         while (realCountdownTime > 0)
             {
+            countdownDisplay.transform.localScale = Vector3.zero;
+            countdownDisplay.transform.DOScale(Vector3.one, .3F);
                 countdownDisplay.text = realCountdownTime.ToString();
 
                 yield return new WaitForSeconds(.5f);
@@ -115,9 +120,11 @@ public class PlayerManager : Singleton<PlayerManager>
             realCountdownTime--;
 
         }
-            
 
-            countdownDisplay.text = "FIGHT";
+
+        countdownDisplay.transform.localScale = Vector3.zero;
+        countdownDisplay.transform.DOScale(Vector3.one, .5F);
+        countdownDisplay.text = "FIGHT";
 
 
             yield return new WaitForSeconds(1f);
